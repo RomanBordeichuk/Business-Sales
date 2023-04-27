@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "x2IAHLP9RW/bibmAUAysOsG237CeMaR0F4SNvNP7+sE=",
+  "Hash": "UH5sY7xTlRfNRLUn81Aeji5JVHtHxyRLCBLdDqoepks=",
   "Source": "BusinessSales",
   "BasePath": "_content/BusinessSales",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\js\\responses.js",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "js/responses.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\responses.js"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\js\\script.js",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
     }
   ]
 }

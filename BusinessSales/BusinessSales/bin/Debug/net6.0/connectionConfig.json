@@ -1,0 +1,6 @@
+{
+  "connectionConfig": {
+    "ConnectionString": "connection",
+    "MySqlServerVersion": [ 8, 0, 31 ]
+  }
+}

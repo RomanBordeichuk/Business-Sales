@@ -4,9 +4,9 @@ namespace BusinessSales
 {
     class Database
     {
-        private (string, MySqlServerVersion) connectionConfig;
+        private (string, int[]) connectionConfig;
 
-        public Database((string, MySqlServerVersion) connectionConfig)
+        public Database((string, int[]) connectionConfig)
         {
             this.connectionConfig = connectionConfig;
         }
@@ -30,13 +30,19 @@ namespace BusinessSales
         }
     }
 
+    class DbConnectionConfig
+    {
+        public string ConnectionString { set; get; }
+        public int[] MySqlServerVersion { set; get; }
+    }
+
     class ApplicationContext : DbContext
     {
-        private (string, MySqlServerVersion) connectionConfig;
+        private (string, int[]) connectionConfig;
         public DbSet<Purchase> Purchases { set; get; } = null!;
         public DbSet<Sale> Sales { set; get; } = null!;
 
-        public ApplicationContext((string, MySqlServerVersion) connectionConfig)
+        public ApplicationContext((string, int[]) connectionConfig)
         {
             this.connectionConfig = connectionConfig;
             Database.EnsureCreated();
@@ -44,8 +50,11 @@ namespace BusinessSales
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySql(connectionConfig.Item1, connectionConfig.Item2);
+            optionsBuilder.UseMySql(connectionConfig.Item1, 
+                new MySqlServerVersion(new Version(
+                    connectionConfig.Item2[0], 
+                    connectionConfig.Item2[1], 
+                    connectionConfig.Item2[2])));
         }
     }
-
 }
