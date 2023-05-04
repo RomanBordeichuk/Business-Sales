@@ -19,6 +19,8 @@ AccountDatabase accountDatabase = new AccountDatabase(
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
+// ********************* SIGN IN / SIGN UP REQUESTS ***********************
+
 app.Map("/signUp", defaultMiddleware =>
 {
     defaultMiddleware.Run(async (context) =>
@@ -30,9 +32,10 @@ app.Map("/signUp", defaultMiddleware =>
 
         if (webAppDatabase.pushNewAccount(dbJson.name, dbJson.password))
         {
+            accountDatabase.setDbName(dbJson.name);
+
             Console.WriteLine("New database successfully created");
 
-            accountDatabase.setDbName(dbJson.name);
             await response.WriteAsJsonAsync<string>("success");
         }
         else
@@ -58,7 +61,8 @@ app.Map("/signIn", defaultMiddleware =>
             Console.WriteLine("Database successfully found");
 
             accountDatabase.setDbName(dbJson.name);
-            await response.WriteAsJsonAsync("success");
+
+            await response.WriteAsJsonAsync<string>("success");
         }
         else
         {
@@ -68,6 +72,70 @@ app.Map("/signIn", defaultMiddleware =>
         }
     });
 });
+
+app.Map("/loadMainPage", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        LoadMainPageJson loadSettingsJson = new LoadMainPageJson(
+            accountDatabase.Name, 
+            accountDatabase.getTotalIncome(),
+            accountDatabase.getTotalCount());
+
+        Console.WriteLine("Main page load settings successfully setted");
+
+        await response.WriteAsJsonAsync<LoadMainPageJson>(
+            loadSettingsJson);
+    });
+});
+
+// ********************* EXECUTING TRANSACTIONS REQUESTS ***********************
+
+app.Map("/pushPurchase", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        PurchaseJson purchaseJson = await request.ReadFromJsonAsync<PurchaseJson>();
+
+        Purchase purchase = new Purchase(Convert.ToDateTime(purchaseJson.date),
+            purchaseJson.nameOfProducts, purchaseJson.priceOfProduct,
+            purchaseJson.countOfProducts, purchaseJson.comment);
+
+        accountDatabase.pushPurchase(purchase);
+
+        Console.WriteLine("Purchase successfully saves");
+
+        response.WriteAsJsonAsync<string>("success");
+    });
+});
+
+app.Map("/pushSale", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        SaleJson saleJson = await request.ReadFromJsonAsync<SaleJson>();
+
+        Sale sale = new Sale(Convert.ToDateTime(saleJson.date),
+            saleJson.nameOfProducts, saleJson.priceOfProduct,
+            saleJson.countOfProducts, saleJson.comment);
+
+        accountDatabase.pushSale(sale);
+
+        Console.WriteLine("Sale successfully saves");
+
+        response.WriteAsJsonAsync<string>("success");
+    });
+});
+
+// ********************* SETTINGS REQUESTS ***********************
 
 app.Map("/changePassword", defaultMiddleware =>
 {

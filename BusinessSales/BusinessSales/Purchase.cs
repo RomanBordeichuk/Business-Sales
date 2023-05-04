@@ -1,15 +1,18 @@
 ﻿namespace BusinessSales
 {
+    record PurchaseJson(string date, string nameOfProducts, double priceOfProduct,
+        int countOfProducts, string comment);
+
     public class Purchase
     {
         private int id;
         private DateTime date;
         private string nameOfProducts;
-        private int priceOfProduct;
+        private double priceOfProduct;
         private int countOfProducts;
         private string comment;
 
-        private int priseOfPurchase;
+        private double priceOfPurchase;
 
         public int Id
         {
@@ -26,7 +29,7 @@
             set { }
             get { return nameOfProducts; }
         }
-        public int PriceOfProduct
+        public double PriceOfProduct
         {
             set { }
             get { return priceOfProduct; }
@@ -41,20 +44,22 @@
             set { }
             get { return comment; }
         }
-        public int PriseOfPurchase
+        public double PriceOfPurchase
         {
             set { }
-            get { return priseOfPurchase; }
+            get { return priceOfPurchase; }
         }
 
         public Purchase(DateTime date, string nameOfProducts, 
-            int priceOfProduct, int countOfProducts, string comment)
+            double priceOfProduct, int countOfProducts, string comment)
         {
             this.date = date;
             this.nameOfProducts = nameOfProducts;
             this.priceOfProduct = priceOfProduct;
             this.countOfProducts = countOfProducts;
             this.comment = comment;
+
+            priceOfPurchase = priceOfProduct * countOfProducts;
         }
     }
 }

@@ -8,11 +8,41 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>main page</h1>
-    
+    <h1 id="mainPageH1">business name</h1>
+
+    <div>
+        <span>Total income: </span>
+        <span id="mainPageTotalIncomeSpan"></span><br>
+        <span>Total count of sold products: </span>
+        <span id="mainPageTotalCountSpan"></span>
+    </div><br>
+
+    <div>
+        <h3>Enter purchase details</h3>
+        <span>Date: </span><input type="text" id="purchaseDateSpan">
+        <span>Name of products: </span><input type="text" id="purchaseNameSpan"><br>
+        <span>Price of each product: </span><input type="text" id="purchasePriceSpan">
+        <span>Count of products: </span><input type="text" id="purchaseCountSpan"><br>
+        <span>Comment to purchase: </span><input type="text" id="purchaseCommentSpan"><br>
+        <button onclick="pushPurchase()">Confirm</button><br>
+    </div><br>
+
+    <div>
+        <h3>Enter sale details</h3>
+        <span>Date: </span><input type="text" id="saleDateSpan">
+        <span>Name of products: </span><input type="text" id="saleNameSpan"><br>
+        <span>Price of each product: </span><input type="text" id="salePriceSpan">
+        <span>Count of products: </span><input type="text" id="saleCountSpan"><br>
+        <span>Comment to sale: </span><input type="text" id="saleCommentSpan"><br>
+        <button onclick="pushSale()">Confirm</button><br>
+    </div><br>
+
     <a href="settings.html">account settings</a>
 
     <script src="js/script.js"></script>
     <script src="js/responses.js"></script>
+    <script>
+        loadMainPage();
+    </script>
 </body>
 </html>
