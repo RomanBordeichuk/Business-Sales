@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Xml.Linq;
 
 namespace BusinessSales
 {
@@ -19,9 +20,15 @@ namespace BusinessSales
         public ApplicationContext((string, int[]) connectionConfig, string dbName)
         {
             this.connectionConfig = connectionConfig;
-            this.dbName = dbName;
+            this.dbName =
+                "business_sales_" + String.Join("_", dbName.Split(" ")) + "_db";
 
             Database.EnsureCreated();
+        }
+        
+        public void deleteDatabase()
+        {
+            Database.EnsureDeleted();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -36,16 +43,16 @@ namespace BusinessSales
 
     class WebAppDbApplicationContext : DbContext
     {
+        static private string dbName = "business_sales_db";
+
         private (string, int[]) connectionConfig;
-        private string dbName;
 
         public DbSet<Account> Accounts { set; get; } = null!;
 
         public WebAppDbApplicationContext(
-            (string, int[]) connectionConfig, string dbName)
+            (string, int[]) connectionConfig)
         {
             this.connectionConfig = connectionConfig;
-            this.dbName = dbName;
 
             Database.EnsureCreated();
         }
