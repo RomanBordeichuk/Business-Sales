@@ -1,12 +1,15 @@
 ﻿namespace BusinessSales
 {
-    record PurchaseJson(string date, string nameOfProducts, double priceOfProduct,
-        int countOfProducts, string comment);
+    record PurchaseJson(string date, string nameOfProducts, 
+        string priceOfProduct, string countOfProducts, string comment);
+    record PurchaseResponseJson(string date, string nameOfProducts, 
+        string priceOfProduct, string countOfProducts, 
+        string comment, string priceOfPurchase);
 
     public class Purchase
     {
         private int id;
-        private DateTime date;
+        private DateOnly date;
         private string nameOfProducts;
         private double priceOfProduct;
         private int countOfProducts;
@@ -19,7 +22,7 @@
             set { id = value; }
             get { return id; }
         }
-        public DateTime Date
+        public DateOnly Date
         {
             set { }
             get { return date; }
@@ -50,7 +53,7 @@
             get { return priceOfPurchase; }
         }
 
-        public Purchase(DateTime date, string nameOfProducts, 
+        public Purchase(DateOnly date, string nameOfProducts, 
             double priceOfProduct, int countOfProducts, string comment)
         {
             this.date = date;

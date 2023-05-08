@@ -8,15 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <span>Name of database to sign Up: </span><input type="text" id="nameInputSignUp"><br>
-        <span>password to account: </span><input type="text" id="passInputSignUp"><br>
-        <button onclick="signUp()">submit</button><br>
-        <span id="signUpPageResponseMessageSpan"></span><br>
-        <a href="index.html">return to sign In page</a>
+    <h1>Purchases history</h1>
+
+    <div id="purchasesHistoryList">
+
     </div>
+    
+    <a href="main.html">return to main</a>
 
     <script src="js/script.js"></script>
     <script src="js/responses.js"></script>
+    <script>
+        loadPurchasesHistory();
+    </script>
 </body>
 </html>

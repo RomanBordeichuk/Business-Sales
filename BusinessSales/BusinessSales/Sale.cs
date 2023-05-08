@@ -1,12 +1,15 @@
 ﻿namespace BusinessSales
 {
-    record SaleJson(string date, string nameOfProducts, double priceOfProduct,
-        int countOfProducts, string comment);
+    record SaleJson(string date, string nameOfProducts, 
+        string priceOfProduct, string countOfProducts, string comment);
+    record SaleResponseJson(string date, string nameOfProducts, 
+        string priceOfProduct, string countOfProducts, 
+        string comments, string priceOfSale);
 
     public class Sale
     {
         private int id;
-        private DateTime date;
+        private DateOnly date;
         private string nameOfProducts;
         private double priceOfProduct;
         private int countOfProducts;
@@ -19,7 +22,7 @@
             set { id = value; }
             get { return id; }
         }
-        public DateTime Date
+        public DateOnly Date
         {
             set { }
             get { return date; }
@@ -50,7 +53,7 @@
             get { return priceOfSale; }
         }
 
-        public Sale(DateTime date, string nameOfProducts,
+        public Sale(DateOnly date, string nameOfProducts,
             double priceOfProduct, int countOfProducts, string comment)
         {
             this.date = date;

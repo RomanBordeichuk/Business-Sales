@@ -29,7 +29,18 @@ const salePriceSpan = document.getElementById("salePriceSpan");
 const saleCountSpan = document.getElementById("saleCountSpan");
 const saleCommentSpan = document.getElementById("saleCommentSpan");
 
+const purchasesHistoryList = document.getElementById("purchasesHistoryList");
+const salesHistoryList = document.getElementById("salesHistoryList");
+const storeList = document.getElementById("storeList");
+
+const indexPageResponseMessageSpan = document.getElementById("indexPageResponseMessageSpan");
+const signUpPageResponseMessageSpan = document.getElementById("signUpPageResponseMessageSpan");
+const mainPageResponseMessageSpan = document.getElementById("mainPageResponseMessageSpan");
+const settingsPageResponseMessageSpan = document.getElementById("settingsPageResponseMessageSpan");
+
 // ******************* REQUESTS *********************
+
+// ******************* SIGNING IN / UP *********************
 
 async function signUp(){
     const response = await fetch("/signUp", {
@@ -44,7 +55,10 @@ async function signUp(){
     const result = await response.json();
 
     if(result == "success") location.href = "main.html";
-    else console.log(result);
+    else {
+        signUpPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }
 
 async function signIn(){
@@ -60,8 +74,13 @@ async function signIn(){
     const result = await response.json();
 
     if(result == "success") location.href = "main.html";
-    else console.log(result);
+    else {
+        indexPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }
+
+// ******************* MAIN PAGE *********************
 
 async function loadMainPage(){
     const response = await fetch("/loadMainPage", {
@@ -72,9 +91,9 @@ async function loadMainPage(){
 
     const result = await response.json();
 
-    mainPageH1.innerText = result["name"];
-    mainPageTotalIncomeSpan.innerText = result["totalIncome"];
-    mainPageTotalCountSpan.innerText = result["totalCount"];
+    mainPageH1.innerText = result.name;
+    mainPageTotalIncomeSpan.innerText = result.totalIncome;
+    mainPageTotalCountSpan.innerText = result.totalCount;
 }
 
 async function pushPurchase(){
@@ -92,8 +111,23 @@ async function pushPurchase(){
 
     const result = await response.json();
 
-    if(result == "success") console.log("Purchase successfully saved");
-    else console.log(result);   
+    if(result == "success") {
+        console.log("Purchase successfully saved");
+
+        purchaseDateSpan.value = "";
+        purchaseNameSpan.value = "";
+        purchasePriceSpan.value = "";
+        purchaseCountSpan.value = "";
+        purchaseCommentSpan.value = "";
+
+        mainPageResponseMessageSpan.innerText = "Purchase successfully saved";
+
+        loadMainPage();
+    }
+    else {
+        mainPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }   
 }
 
 async function pushSale(){
@@ -111,9 +145,97 @@ async function pushSale(){
 
     const result = await response.json();
 
-    if(result == "success") console.log("Sale successfully saved");
-    else console.log(result);
+    if(result == "success") {
+        console.log("Sale successfully saved");
+        
+        saleDateSpan.value = "";
+        saleNameSpan.value = "";
+        salePriceSpan.value = "";
+        saleCountSpan.value = "";
+        saleCommentSpan.value = "";
+
+        mainPageResponseMessageSpan.innerText = "Sale successfully saved";
+
+        loadMainPage();
+    }
+    else {
+        mainPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }
+
+// ******************* SALES / PURCHASES HISTORY & STORE *********************
+
+async function loadPurchasesHistory(){
+    const response = await fetch("/purchasesHistory", {
+        method: "purchasesHistory",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    result.forEach(fieldJson => {
+        let fieldDiv = document.createElement("div");
+
+        fieldDiv.innerText = 
+        `Date: ${fieldJson.date}, ` +
+        `Name of products: ${fieldJson.nameOfProducts}, ` +
+        `Price of each product: ${fieldJson.priceOfProduct}, ` +
+        `Count of products: ${fieldJson.countOfProducts}, ` +
+        `Comment to purchase: ${fieldJson.comment}, ` +
+        `Price of purchase: ${fieldJson.priceOfPurchase}\n\n`;
+
+        purchasesHistoryList.append(fieldDiv);
+    });
+}
+
+async function loadSalesHistory(){
+    const response = await fetch("/salesHistory", {
+        method: "salesHistory",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    result.forEach(fieldJson => {
+        let fieldDiv = document.createElement("div");
+
+        fieldDiv.innerText = 
+        `Date: ${fieldJson.date}, ` +
+        `Name of products: ${fieldJson.nameOfProducts}, ` +
+        `Price of each product: ${fieldJson.priceOfProduct}, ` +
+        `Count of products: ${fieldJson.countOfProducts}, ` +
+        `Comment to purchase: ${fieldJson.comment}, ` +
+        `Price of purchase: ${fieldJson.priceOfSale}\n\n`;
+
+        salesHistoryList.append(fieldDiv);
+    });
+}
+
+async function loadStore(){
+    const response = await fetch("/store", {
+        method: "store",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    result.forEach(fieldJson => {
+        let fieldDiv = document.createElement("div");
+
+        fieldDiv.innerText = 
+        `Name of products: ${fieldJson.nameOfProducts}, ` +
+        `Count of products: ${fieldJson.countOfProducts}, ` +
+        `Price of products batch: ${fieldJson.purchasePrice}\n\n`;
+
+        storeList.append(fieldDiv);
+    });
+}
+
+// ******************* SETTINGS PAGE *********************
 
 async function changeAccountName(){
     const response = await fetch("/changeName", {
@@ -127,7 +249,10 @@ async function changeAccountName(){
     const result = await response.json();
 
     if(result == "success") location.href = "index.html";
-    else console.log(result);
+    else {
+        settingsPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }
 
 async function changeAccountPassword(){
@@ -142,7 +267,10 @@ async function changeAccountPassword(){
     const result = await response.json();
 
     if(result == "success") location.href = "index.html";
-    else console.log(result);
+    else {
+        settingsPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }
 
 async function deleteAccount(){
@@ -155,5 +283,8 @@ async function deleteAccount(){
     const result = await response.json();
 
     if(result == "success") location.href = "index.html";
-    else console.log(result);
+    else {
+        settingsPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }

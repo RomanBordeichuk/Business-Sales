@@ -16,6 +16,7 @@ namespace BusinessSales
 
         public DbSet<Purchase> Purchases { set; get; } = null!;
         public DbSet<Sale> Sales { set; get; } = null!;
+        public DbSet<ProductsBatch> Store { set; get; } = null!;
 
         public ApplicationContext((string, int[]) connectionConfig, string dbName)
         {

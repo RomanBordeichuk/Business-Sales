@@ -68,10 +68,12 @@ app.Map("/signIn", defaultMiddleware =>
         {
             Console.WriteLine("Database doesn't exists");
 
-            await response.WriteAsJsonAsync("account doesn't exists");
+            await response.WriteAsJsonAsync("Incorrect account name or password");
         }
     });
 });
+
+// ********************* MAIN PAGE REQUESTS ***********************
 
 app.Map("/loadMainPage", defaultMiddleware =>
 {
@@ -102,15 +104,54 @@ app.Map("/pushPurchase", defaultMiddleware =>
 
         PurchaseJson purchaseJson = await request.ReadFromJsonAsync<PurchaseJson>();
 
-        Purchase purchase = new Purchase(Convert.ToDateTime(purchaseJson.date),
-            purchaseJson.nameOfProducts, purchaseJson.priceOfProduct,
-            purchaseJson.countOfProducts, purchaseJson.comment);
+        DateOnly date;
+        string nameOfProducts = purchaseJson.nameOfProducts;
+        double priceOfProduct;
+        int countOfProducts;
+        string comment = purchaseJson.comment;
 
-        accountDatabase.pushPurchase(purchase);
+        string responseMessage = "";
 
-        Console.WriteLine("Purchase successfully saves");
+        bool purchaseJsonCorrect = true;
 
-        response.WriteAsJsonAsync<string>("success");
+        if (!DateOnly.TryParse(purchaseJson.date, out date))
+        {
+            Console.WriteLine("Incorrect input date");
+            responseMessage += "Incorrect input date\n";
+
+            purchaseJsonCorrect = false;
+        }
+        if (!double.TryParse(purchaseJson.priceOfProduct, out priceOfProduct))
+        {
+            Console.WriteLine("Incorrect input price of each product");
+            responseMessage += "Incorrect input price of each product\n";
+
+            purchaseJsonCorrect = false;
+        }
+        if (!int.TryParse(purchaseJson.countOfProducts, out countOfProducts))
+        {
+            Console.WriteLine("Incorrect input count of products");
+            responseMessage += "Incorrect input count of products\n";
+
+            purchaseJsonCorrect = false;
+        }
+
+        if (purchaseJsonCorrect)
+        {
+            Purchase purchase = new Purchase(date, nameOfProducts, 
+                priceOfProduct, countOfProducts, comment);
+
+            ProductsBatch productsBatch = new ProductsBatch(purchase.NameOfProducts, 
+                purchase.CountOfProducts, purchase.PriceOfPurchase);
+
+            accountDatabase.pushPurchase(purchase);
+            accountDatabase.appendProductsToBatch(productsBatch);
+
+            Console.WriteLine("Purchase successfully saves");
+            responseMessage = "success";
+        }
+
+        await response.WriteAsJsonAsync<string>(responseMessage);
     });
 });
 
@@ -123,15 +164,113 @@ app.Map("/pushSale", defaultMiddleware =>
 
         SaleJson saleJson = await request.ReadFromJsonAsync<SaleJson>();
 
-        Sale sale = new Sale(Convert.ToDateTime(saleJson.date),
-            saleJson.nameOfProducts, saleJson.priceOfProduct,
-            saleJson.countOfProducts, saleJson.comment);
+        DateOnly date;
+        string nameOfProducts = saleJson.nameOfProducts;
+        double priceOfProduct;
+        int countOfProducts;
+        string comment = saleJson.comment;
 
-        accountDatabase.pushSale(sale);
+        string responseMessage = "";
 
-        Console.WriteLine("Sale successfully saves");
+        bool saleJsonCorrect = true;
 
-        response.WriteAsJsonAsync<string>("success");
+        if (!DateOnly.TryParse(saleJson.date, out date))
+        {
+            Console.WriteLine("Incorrect input date");
+            responseMessage += "Incorrect input date\n";
+
+            saleJsonCorrect = false;
+        }
+        if (!double.TryParse(saleJson.priceOfProduct, out priceOfProduct))
+        {
+            Console.WriteLine("Incorrect input price of each product");
+            responseMessage += "Incorrect input price of each product\n";
+
+            saleJsonCorrect = false;
+        }
+        if (!int.TryParse(saleJson.countOfProducts, out countOfProducts))
+        {
+            Console.WriteLine("Incorrect input count of products");
+            responseMessage += "Incorrect input count of products\n";
+
+            saleJsonCorrect = false;
+        }
+
+        if (saleJsonCorrect)
+        {
+            if (accountDatabase.hasProducts(nameOfProducts))
+            {
+                if (accountDatabase.hasAnoughCount(
+                    nameOfProducts, countOfProducts))
+                {
+                    Sale sale = new Sale(date, nameOfProducts,
+                        priceOfProduct, countOfProducts, comment);
+
+                    accountDatabase.pushSale(sale);
+                    accountDatabase.popProductsFromBatch(
+                        sale.NameOfProducts, sale.CountOfProducts, sale.PriceOfSale);
+
+                    Console.WriteLine("Sale successfully saves");
+                    responseMessage = "success";
+                }
+                else
+                {
+                    Console.WriteLine("Not anough count of products in store database");
+                    responseMessage = "Not anough count of products in store database";
+                }
+            }
+            else
+            {
+                Console.WriteLine("Products had't found in store database");
+                responseMessage = "Products had't found in store database";
+            }
+        }
+
+        await response.WriteAsJsonAsync<string>(responseMessage);
+    });
+});
+
+// **************** SALES / PURCHASES HISTORY & STORE REQUESTS *******************
+
+app.Map("/purchasesHistory", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<PurchaseResponseJson> purchasesHistory = accountDatabase.getPurchases();
+
+        Console.WriteLine("History of purchases successfully responded");
+
+        await response.WriteAsJsonAsync<List<PurchaseResponseJson>>(purchasesHistory);
+    });
+});
+
+app.Map("/salesHistory", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<SaleResponseJson> salesHistory = accountDatabase.getSales();
+
+        Console.WriteLine("History of sales successfully responded");
+
+        await response.WriteAsJsonAsync<List<SaleResponseJson>>(salesHistory);
+    });
+});
+
+app.Map("/store", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<ProductsBatchJson> store = accountDatabase.getStore();
+
+        Console.WriteLine("Store of unsold products successfully responded");
+
+        await response.WriteAsJsonAsync<List<ProductsBatchJson>>(store);
     });
 });
 

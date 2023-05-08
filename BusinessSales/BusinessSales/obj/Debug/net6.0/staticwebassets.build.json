@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oHX4+X02AEY+SzAlmpYJmXmBuuq+vIM13nOod8wXdqM=",
+  "Hash": "0Zs4q8dpZnJxhsgELHuBV7wQRaIl8FCJd8YdxcgS9lc=",
   "Source": "BusinessSales",
   "BasePath": "_content/BusinessSales",
   "Mode": "Default",
@@ -102,6 +102,40 @@
       "OriginalItemSpec": "wwwroot\\main.html"
     },
     {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\purchasesHistory.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "purchasesHistory.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\purchasesHistory.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\salesHistory.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "salesHistory.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\salesHistory.html"
+    },
+    {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\settings.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
@@ -134,6 +168,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\signUp.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\store.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "store.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\store.html"
     }
   ]
 }
