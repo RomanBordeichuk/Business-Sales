@@ -1,3 +1,97 @@
-body{
-    background: black;
+  body{
+    background-image: url(../img/front.JPG);
+    background-size: cover;
+    background-repeat:no-repeat;
+    height:100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    
+  }
+  .registration-cssave{
+    display:flex;
+    align-items:center;
+    justify-content: right;
+    margin-right: 10%;
+    margin-top: 15%;
+  }
+  .registration-cssave form {
+    display: flex;
+    flex-direction: column;
+    padding:10px 25px 30px 25px;
+    border-radius:10px;
+    box-shadow:3px 3px 15px #CDCCCA;
+    background-color:#202027;
+  }
+  
+  .registration-cssave form h3 {
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom:15px;
+    margin-top: 15px;
+    color: white;
+  }
+  /*розмір блоку*/
+  .registration-cssave .item {
+    border-radius:10px; /* округлості вписок*/
+    margin-bottom:10px;/* відступ між двома вписками блочка*/
+    padding:10px 150px;/* ширина і довжина блочка*/
+    
+  }
+  
+  .registration-cssave .create-account {
+    border-radius:10px;
+    padding:10px 205px;
+    font-size:18px;
+    font-weight:lighter;
+    background-color:#97B981;
+    border:none;
+    color:white;
+    margin-top:10px;
+    margin-bottom: 30px;
+  }
+  a:link{
+    color: #5a9971;
+  }
+ 
+footer{
+    display: flex;
+    padding: 10px;
+    background-color: #202027;
+    justify-content: center;
+    margin-top: 7%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+footer nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+}
+footer a{
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer nav .social{
+  display: flex;
+  flex-direction: row;
+ justify-content: space-between;
+}
+footer nav .social .about-us {
+  margin-right: 50px;
+}
+footer nav .media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+footer nav .media .telegram {
+  margin-right: 50px;
 }

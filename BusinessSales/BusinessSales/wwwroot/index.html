@@ -1,13 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Index page</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Business</title>
+  </head>
+  <body>
+    <div class="registration-cssave">
+      <form>
+        <h3 class="text-center">Name of company:</h3>
+        <div class="form-group">
+          <input
+            class="form-control item"
+            type="text"
+            name="username"
+            maxlength="15"
+            minlength="4"
+            pattern="^[a-zA-Z0-9_.-]*$"
+            id="username"
+            placeholder=""
+            required
+          />
+        </div>
+        <h3 class="text-center">Password of account:</h3>
+        <div class="form-group">
+          <input
+            class="form-control item"
+            type="password"
+            name="Password"
+            minlength="6"
+            id="password"
+            placeholder=""
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button
+            class="btn btn-primary btn-block create-account"
+            type="submit"
+          >
+            Sign in
+          </button>
+        </div>
+        <div class="registration">
+          <a href="registration.html" style="color:#97B981;"> Not registered yet? Create an account </a>
+        </div>
+      </form>
+    </div>
+
+    <footer>
+      <nav>
+        <div class="social">
+          <a href="" class="about-us"> About us </a>
+          <a href=""> Contact </a>
+        </div>
+
+        <div class="media">
+          <a href="" class="telegram"> Telegram </a>
+          <a href=""> Instagram </a>
+        </div>
+      </nav>
+    </footer>
+  </body>
 </html>
