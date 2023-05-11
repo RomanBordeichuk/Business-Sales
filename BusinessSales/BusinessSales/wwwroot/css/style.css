@@ -1,97 +1,85 @@
-  body{
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;    
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
     background-image: url(../img/front.JPG);
     background-size: cover;
-    background-repeat:no-repeat;
-    height:100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0;
-    
-  }
-  .registration-cssave{
-    display:flex;
-    align-items:center;
-    justify-content: right;
-    margin-right: 10%;
-    margin-top: 15%;
-  }
-  .registration-cssave form {
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/***************** MAIN *****************/
+
+.main{
+    display: flex;
+    flex-direction: row-reverse;
+}
+form {
+    width: 40%;
+    min-width: 400px;
+    margin-top: 200px;
+    margin-right: 5%;
     display: flex;
     flex-direction: column;
-    padding:10px 25px 30px 25px;
+    padding: 20px;
+    padding-bottom: 30px;
     border-radius:10px;
     box-shadow:3px 3px 15px #CDCCCA;
     background-color:#202027;
-  }
-  
-  .registration-cssave form h3 {
+}  
+form h3 {
+    padding: 15px 0;
     font-weight: lighter;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom:15px;
-    margin-top: 15px;
     color: white;
-  }
-  /*розмір блоку*/
-  .registration-cssave .item {
-    border-radius:10px; /* округлості вписок*/
-    margin-bottom:10px;/* відступ між двома вписками блочка*/
-    padding:10px 150px;/* ширина і довжина блочка*/
-    
-  }
-  
-  .registration-cssave .create-account {
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+form button{
+    width: 100%;
+    margin: 25px 0;
+    padding: 10px;
+    border:none;
     border-radius:10px;
-    padding:10px 205px;
     font-size:18px;
     font-weight:lighter;
     background-color:#97B981;
-    border:none;
     color:white;
-    margin-top:10px;
-    margin-bottom: 30px;
-  }
-  a:link{
-    color: #5a9971;
-  }
- 
-footer{
-    display: flex;
-    padding: 10px;
-    background-color: #202027;
-    justify-content: center;
-    margin-top: 7%;
-    padding-left: 50px;
-    padding-right: 50px;
 }
-footer nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
-}
-footer a{
-  padding: 20px;
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-}
-footer a:hover{
-  text-decoration: underline;
-}
-footer nav .social{
-  display: flex;
-  flex-direction: row;
- justify-content: space-between;
-}
-footer nav .social .about-us {
-  margin-right: 50px;
-}
-footer nav .media{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+form a{
+    color:#97B981;
 }
 
-footer nav .media .telegram {
-  margin-right: 50px;
+/***************** FOOTER *****************/
+ 
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #202027;
+}
+footer .container{
+    display: flex;
+}
+footer nav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+footer a{
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+footer a:hover{
+    text-decoration: underline;
 }

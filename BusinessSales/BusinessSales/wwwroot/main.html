@@ -5,76 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css"/>
-    <title>Document</title>
+    <title>Main page</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="social">
-              <a href="" class="about-us"> About us </a>
-              <a href=""> Contact </a>
-            </div>
-    
-            <div class="media">
-              <a href="" class="telegram"> Telegram </a>
-              <a href=""> Instagram </a>
-            </div>
-          </nav>
+        <div class="container">
+            <nav><a href="">About us</a></nav>
+            <nav><a href="">Contact</a></nav>
+            <nav><a href="">Telegram</a></nav>
+            <nav><a href="">Instagram</a></nav>
+        </div>
     </header>
 
-    <h1 class="company-name">The company name</h1>
-    <div class="button-container">
-        <button class="button-with-image">
-          <a href="" class="button">Investment schedule →</a>
-          <!--<span>Investment schedule -></span>-->
-        </button>
-        <button class="button-with-image second">
-          <a href="" class="button">Profit schedule →</a>
-          <!--<span>Profit schedule -></span>-->
-        </button>
-        <button class="button-with-image third">
-          <a href="" class="button">Net income schedule →</a>
-          <!--<span>Net income schedule -></span>-->
-        </button>
-        
-    </div>
-
-    <div class="main">
-      
-      <div class="inftable">
-        <span class="title">Information tables</span>
-
-        <div class="menu">
-          <button class="inform goods">
-            <span>Menu for entering information about the purchase of goods</span>
-          </button>
-
-          <button class="inform sales">
-            <span>Menu for reporting on product sales</span>
-          </button>
+    <div class="container">
+        <h1>The company name</h1>
+        <div class="graphs_list">
+            <button>
+                <a href="">Investment graph →</a>
+                <img src="img/d1.JPEG" alt="">
+            </button>
+            <button>
+                <a href="">Profit graph →</a>
+                <img src="img/d2.JPEG" alt="">
+            </button>
+            <button>
+                <a href="">Net income graph →</a>
+                <img src="img/d3.JPEG" alt="">
+            </button>
         </div>
-        
-        <div class="history-products">
-          <button class="history">
-            <span>Sales history</span>
-          </button>
-
-          <button class="history">
-            <span>Contained products</span>
-          </button>
+        <div class="main">
+            <div class="main_block">
+                <h3>Input new purchase / sale</h3>
+                <div class="inputs_block">
+                    <div class="input_block input_purchases">
+                        <h4 onclick="showPurchasesInputs()">
+                            Menu for entering information about the purchase of goods
+                        </h4>
+                        <div class="hidden_block" id="purchases_hidden_block">
+                            <div>
+                                <span>Date of purchase</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Name of products</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Price of each product</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Count of products</span>
+                                <input type="text">
+                            </div>
+                            <div class="comment">
+                                <span>Comment to purchase</span>
+                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                                <span class="result"></span>
+                            </div>
+                            <button>submit</button>
+                        </div>
+                    </div>
+                    <div class="input_block input_sales">
+                        <h4 onclick="showSalesInputs()">
+                            Menu for reporting on product sales
+                        </h4>
+                        <div class="hidden_block" id="sales_hidden_block">
+                            <div>
+                                <span>Date of sale</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Name of products</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Price of each product</span>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <span>Count of products</span>
+                                <input type="text">
+                            </div>
+                            <div class="comment">
+                                <span>Comment to sale</span>
+                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                                <span class="result"></span>
+                            </div>
+                            <button>submit</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="links_block">
+                    <a href="">Sales history</a>
+                    <a href="">Contained products</a>
+                </div>
+            </div>
+            <div class="info_labels_block">
+                <button>
+                    <span>Total income:</span>
+                    <span class="info">100500$</span>
+                </button>
+                <button>
+                    <span>Total guantity of goods sold:</span>
+                    <span class="info">255</span>
+                </button>
+            </div>
         </div>
-      </div>
-
-      <div class="button-income-quantity">
-        <button class="button-main income">
-          <span>Total income:</span>
-        </button>
-        
-        <button class="button-main quantity">
-          <span>Total guantity of goods sold:</span>
-        </button>
-      </div>
-
     </div>
+    
+    <script src="js/script.js"></script>
 </body>
 </html>

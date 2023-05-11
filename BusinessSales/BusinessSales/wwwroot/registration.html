@@ -8,28 +8,24 @@
     <title>Registration</title>
 </head>
 <body>
-    
-    <div class="registration-cssave">
+    <div class="container main">
         <form>
-            
-            <h2 class="text-center">Let's create your user account </h2>
-            <h3 class="text-center">Username:</h3>
-            <div class="form-group">
-                <input class="form-control item" type="text" name="username" maxlength="15" minlength="4" pattern="^[a-zA-Z0-9_.-]*$" id="username" placeholder="" required>
-            </div>
-            <!--<h3 class="text-center">Email address:</h3>
-            <div class="form-group">
-                <input class="form-control item" type="email" name="email address" id="email" placeholder="" required>
-            </div>-->
-            <h3 class="text-center">Password:</h3>
-            <div class="form-group">
-                <input class="form-control item" type="password" name="Password" minlength="6" id="password" placeholder="" required>
-            </div>
-            
-            <div class="form-group">
-                <button class="btn btn-primary btn-block create-account" type="submit">Sign up</button>
-            </div>
+            <h2>Let's create your user account </h2>
+            <h3>Username:</h3>
+            <input type="text" name="username" maxlength="40">
+            <h3>Password:</h3>
+            <input type="password" name="Password" maxlength="40">
+            <button type="submit">Sign up</button>
         </form>
-    </div> 
+    </div>
+
+    <footer>
+        <div class="container">
+            <nav><a href=""> About us </a></nav>
+            <nav><a href=""> Contact </a></nav>
+            <nav><a href=""> Telegram </a></nav>
+            <nav><a href=""> Instagram </a></nav>
+        </div>
+    </footer>
 </body>
 </html>
