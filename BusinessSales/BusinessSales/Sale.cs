@@ -4,7 +4,7 @@
         string priceOfProduct, string countOfProducts, string comment);
     record SaleResponseJson(string date, string nameOfProducts, 
         string priceOfProduct, string countOfProducts, 
-        string comments, string priceOfSale);
+        string comments, string priceOfSale, string costOfSale);
 
     public class Sale
     {
@@ -16,6 +16,8 @@
         private string comment;
 
         private double priceOfSale;
+
+        private double costOfSale;
 
         public int Id
         {
@@ -52,9 +54,15 @@
             set { }
             get { return priceOfSale; }
         }
+        public double CostOfSale
+        {
+            set { }
+            get { return costOfSale; }
+        }
 
         public Sale(DateOnly date, string nameOfProducts,
-            double priceOfProduct, int countOfProducts, string comment)
+            double priceOfProduct, int countOfProducts, 
+            string comment, double costOfSale)
         {
             this.date = date;
             this.nameOfProducts = nameOfProducts;
@@ -63,6 +71,8 @@
             this.comment = comment;
 
             priceOfSale = priceOfProduct * countOfProducts;
+
+            this.costOfSale = costOfSale;
         }
     }
 }

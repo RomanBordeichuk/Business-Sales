@@ -6,7 +6,8 @@ namespace BusinessSales
     record PasswordJson(string password);
     record DatabaseJson(string name, string password);
 
-    record LoadMainPageJson(string name, double totalIncome, int totalCount);
+    record LoadMainPageJson(string name, double totalIncome, int totalCount, 
+        int avPercent, int countStore, double costStore, string currentDate);
 
     class AccountDatabase
     {
@@ -108,6 +109,25 @@ namespace BusinessSales
             }
         }
 
+        public double getCostOfSale(string nameOfProducts, int countOfProducts)
+        {
+            using(ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
+                {
+                    if(productsBatch.NameOfProducts == nameOfProducts)
+                    {
+                        return (double)countOfProducts / 
+                            (double)productsBatch.CountOfProducts * 
+                            (double)productsBatch.PurchasePrice;
+                    }
+                }
+
+                return 0;
+            }
+        }
+
         public void appendProductsToBatch(ProductsBatch productsBatch)
         {
             using(ApplicationContext db =
@@ -205,7 +225,8 @@ namespace BusinessSales
                         Convert.ToString(sale.Date), sale.NameOfProducts,
                         Convert.ToString(sale.PriceOfProduct),
                         Convert.ToString(sale.CountOfProducts), sale.Comment,
-                        Convert.ToString(sale.PriceOfSale));
+                        Convert.ToString(sale.PriceOfSale),
+                        Convert.ToString(sale.CostOfSale));
 
                     salesHistory.Add(saleResponseJson);
                 }
@@ -259,6 +280,55 @@ namespace BusinessSales
             }
 
             return totalCount;
+        }
+        public int getAvPercent()
+        {
+            double sumPercent = 0;
+            int countOfSales = 0;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in db.Sales.ToList())
+                {
+                    sumPercent += (sale.PriceOfSale - sale.CostOfSale) / 
+                        sale.CostOfSale;
+                    countOfSales++;
+                }
+            }
+
+            if (countOfSales == 0) return 0;
+            return (int)Math.Round(sumPercent / countOfSales * 100);
+        }
+        public int getCountStore()
+        {
+            int countStore = 0;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
+                {
+                    countStore += productsBatch.CountOfProducts;
+                }
+            }
+
+            return countStore;
+        }
+        public double getCostStore()
+        {
+            double costStore = 0;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
+                {
+                    costStore += productsBatch.PurchasePrice;
+                }
+            }
+
+            return costStore;
         }
     }
 }

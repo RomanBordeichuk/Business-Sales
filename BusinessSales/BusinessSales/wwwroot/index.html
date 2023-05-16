@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Business</title>
 </head>
 <body>
-    <div>
-        <span>Name of database to sign In: </span><input type="text" id="nameInputSignIn"><br>
-        <span>password to account: </span><input type="text" id="passInputSignIn"><br>
-        <button onclick="signIn()">submit</button><br>
-        <span id="indexPageResponseMessageSpan"></span><br>
-        <a href="signUp.html">Sign Up</a>
+    <div class="container main">
+        <div class="form">
+            <h3>Name of company:</h3>
+            <input type="text" id="nameInputSignIn" maxlength="40">
+            <h3>Password of account:</h3>
+            <input type="password" id="passInputSignIn" maxlength="40">
+            <div class="load_img_block">
+                <img class="loadImg" src="img/indexPageLoading.png" style="display: none;" alt="">
+            </div>
+            <span id="indexPageResponseMessageSpan" class="response"></span>
+            <button onclick="signIn()">Sign in</button>
+            <a href="registration.html">Not registered yet? Create an account</a>
+        </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <nav><a href=""> About us </a></nav>
+            <nav><a href=""> Contact </a></nav>
+            <nav><a href=""> Telegram </a></nav>
+            <nav><a href=""> Instagram </a></nav>
+        </div>
+    </footer>
 
     <script src="js/script.js"></script>
     <script src="js/responses.js"></script>

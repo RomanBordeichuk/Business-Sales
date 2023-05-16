@@ -30,19 +30,28 @@ app.Map("/signUp", defaultMiddleware =>
 
         DatabaseJson dbJson = await request.ReadFromJsonAsync<DatabaseJson>();
 
-        if (webAppDatabase.pushNewAccount(dbJson.name, dbJson.password))
+        if(dbJson.name != "" && dbJson.password != "")
         {
-            accountDatabase.setDbName(dbJson.name);
+            if (webAppDatabase.pushNewAccount(dbJson.name, dbJson.password))
+            {
+                accountDatabase.setDbName(dbJson.name);
 
-            Console.WriteLine("New database successfully created");
+                Console.WriteLine("New database successfully created");
 
-            await response.WriteAsJsonAsync<string>("success");
+                await response.WriteAsJsonAsync<string>("success");
+            }
+            else
+            {
+                Console.WriteLine("Database already exists");
+
+                await response.WriteAsJsonAsync<string>("account already exists");
+            }
         }
         else
         {
-            Console.WriteLine("Database already exists");
+            Console.WriteLine("Incorrect input account name or password");
 
-            await response.WriteAsJsonAsync<string>("account already exists");
+            await response.WriteAsJsonAsync<string>("Incorrect name of password");
         }
     });
 });
@@ -81,10 +90,17 @@ app.Map("/loadMainPage", defaultMiddleware =>
     {
         var response = context.Response;
 
+        DateTime today = DateTime.Today;
+        string currentDate = today.Day + "." + today.Month + "." + today.Year;
+
         LoadMainPageJson loadSettingsJson = new LoadMainPageJson(
             accountDatabase.Name, 
             accountDatabase.getTotalIncome(),
-            accountDatabase.getTotalCount());
+            accountDatabase.getTotalCount(),
+            accountDatabase.getAvPercent(),
+            accountDatabase.getCountStore(),
+            accountDatabase.getCostStore(),
+            currentDate);
 
         Console.WriteLine("Main page load settings successfully setted");
 
@@ -203,8 +219,11 @@ app.Map("/pushSale", defaultMiddleware =>
                 if (accountDatabase.hasAnoughCount(
                     nameOfProducts, countOfProducts))
                 {
+                    double costOfSale = accountDatabase.getCostOfSale(
+                        nameOfProducts, countOfProducts);
+
                     Sale sale = new Sale(date, nameOfProducts,
-                        priceOfProduct, countOfProducts, comment);
+                        priceOfProduct, countOfProducts, comment, costOfSale);
 
                     accountDatabase.pushSale(sale);
                     accountDatabase.popProductsFromBatch(
