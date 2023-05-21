@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace BusinessSales
 {
@@ -83,11 +84,7 @@ namespace BusinessSales
             using(ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
-                foreach(ProductsBatch productsBatch in db.Store.ToList())
-                {
-                    if (productsBatch.NameOfProducts == nameOfProducts)
-                        return true;
-                }
+                return db.Store.ToList().Any(x => x.NameOfProducts == nameOfProducts);
             }
 
             return false;

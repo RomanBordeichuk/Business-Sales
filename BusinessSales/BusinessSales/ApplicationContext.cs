@@ -11,7 +11,7 @@ namespace BusinessSales
 
     class ApplicationContext : DbContext
     {
-        private (string, int[]) connectionConfig;
+        private (string, int[]) connectionConfig; 
         private string dbName;
 
         public DbSet<Purchase> Purchases { set; get; } = null!;
