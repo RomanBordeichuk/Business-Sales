@@ -7,6 +7,9 @@
         string priceOfProduct, string countOfProducts, 
         string comment, string priceOfPurchase);
 
+    record CostGraphJson(List<string> info, 
+        List<double> values, List<string> colors);
+
     public class Purchase
     {
         private int id;

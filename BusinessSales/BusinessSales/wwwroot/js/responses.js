@@ -45,7 +45,10 @@ const indexPageResponseMessageSpan = document.getElementById("indexPageResponseM
 const signUpPageResponseMessageSpan = document.getElementById("signUpPageResponseMessageSpan");
 const mainPagePurchaseResponseSpan = document.getElementById("mainPagePurchaseResponseSpan");
 const mainPageSaleResponseSpan = document.getElementById("mainPageSaleResponseSpan");
-const settingsPageResponseMessageSpan = document.getElementById("settingsPageResponseMessageSpan");
+const settingsPageNameResponseMessageSpan = 
+    document.getElementById("settingsPageNameResponseMessageSpan");
+const settingsPagePassResponseMessageSpan = 
+    document.getElementById("settingsPagePassResponseMessageSpan");
 
 // ******************* PROLOADER *********************
 
@@ -266,9 +269,6 @@ async function loadPurchasesHistory(){
             `<input readonly type="text" value="${fieldJson.priceOfPurchase}$">` +
             `<input readonly type="text" value="${fieldJson.comment}">` +
             `<div class="change">` +
-                `<button onclick="">` +
-                    `<img src="img/pencil.png" alt="">` +
-                `</button>` +
                 `<button onclick="deletePurchasesHistoryField(${Number(fieldJson.id)})">` +
                     `<img src="img/trash.png" alt="">` +
                 `</button>` +
@@ -302,9 +302,6 @@ async function loadSalesHistory(){
             `<input readonly type="text" value="${fieldJson.costOfSale}$">` +
             `<input readonly type="text" value="${fieldJson.comment}">` +
             `<div class="change">` +
-                `<button onclick="">` +
-                    `<img src="img/pencil.png" alt="">` +
-                `</button>` +
                 `<button onclick="deleteSalesHistoryField(${Number(fieldJson.id)})">` +
                     `<img src="img/trash.png" alt="">` +
                 `</button>` +
@@ -334,9 +331,6 @@ async function loadStore(){
             `<input readonly type="text" value="${fieldJson.countOfProducts}">` +
             `<input readonly type="text" value="${fieldJson.purchasePrice}$">` +
             `<div class="change">` +
-                `<button onclick="">` +
-                    `<img src="img/pencil.png" alt="">` +
-                `</button>` +
                 `<button onclick="deleteStoreField(${Number(fieldJson.id)})">` +
                     `<img src="img/trash.png" alt="">` +
                 `</button>` +
@@ -345,6 +339,44 @@ async function loadStore(){
 
         storeList.append(fieldDiv);
     });
+}
+
+// ******************* GRAPHS *********************
+
+async function loadCostGraph(){
+    const response = await fetch("/loadCostGraph", {
+        method: "loadCostGraph",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    setCostChart(result);
+}
+
+async function loadIncomeGraph(){
+    const response = await fetch("/loadIncomeGraph", {
+        method: "loadIncomeGraph",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    setIncomeChart(result);
+}
+
+async function loadNetIncomeGraph(){
+    const response = await fetch("/loadNetIncomeGraph", {
+        method: "loadNetIncomeGraph",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+    
+    setNetIncomeChart(result);
 }
 
 // ******************* SETTINGS PAGE *********************
@@ -362,7 +394,8 @@ async function changeAccountName(){
 
     if(result == "success") location.href = "index.html";
     else {
-        settingsPageResponseMessageSpan.innerText = result;
+        settingsPageNameResponseMessageSpan.innerHTML = result;
+        settingsPageNameResponseMessageSpan.style = "background: #cf6655;";
         console.log(result);
     }
 }
@@ -380,7 +413,8 @@ async function changeAccountPassword(){
 
     if(result == "success") location.href = "index.html";
     else {
-        settingsPageResponseMessageSpan.innerText = result;
+        settingsPagePassResponseMessageSpan.innerText = result;
+        settingsPagePassResponseMessageSpan.style = "background: #cf6655;";
         console.log(result);
     }
 }
@@ -403,25 +437,6 @@ async function deleteAccount(){
 
 // ******************* CHANGING DB DATA *********************
 
-async function deleteSalesHistoryField(id){
-    const response = await fetch("/deleteSalesHistoryField", {
-        method: "deleteSalesHistoryField",
-        headers: { "Accept":"application/json", "Content-type":"application/json" },
-        body: JSON.stringify({
-            id: id
-        })
-    });
-
-    const result = await response.json();
-
-    if(result == "success") {
-        salesHistoryList.innerHTML = "";
-
-        loadSalesHistory();
-    }
-    else console.log(result);
-}
-
 async function deletePurchasesHistoryField(id){
     const response = await fetch("/deletePurchasesHistoryField", {
         method: "deletePurchasesHistoryField",
@@ -437,6 +452,25 @@ async function deletePurchasesHistoryField(id){
         purchasesHistoryList.innerHTML = "";
 
         loadPurchasesHistory();
+    }
+    else console.log(result);
+}
+
+async function deleteSalesHistoryField(id){
+    const response = await fetch("/deleteSalesHistoryField", {
+        method: "deleteSalesHistoryField",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            id: id
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") {
+        salesHistoryList.innerHTML = "";
+
+        loadSalesHistory();
     }
     else console.log(result);
 }

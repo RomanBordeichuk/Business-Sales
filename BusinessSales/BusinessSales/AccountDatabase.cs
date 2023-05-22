@@ -14,7 +14,7 @@ namespace BusinessSales
     {
         private (string, int[]) connectionConfig;
         private string name;
-        
+
         public string Name
         {
             set { }
@@ -31,14 +31,14 @@ namespace BusinessSales
             this.name = name;
 
             using (ApplicationContext db =
-                new ApplicationContext(connectionConfig, this.name));
+                new ApplicationContext(connectionConfig, this.name)) ;
         }
         public void rewriteDatabase(string newDbName)
         {
             using (ApplicationContext newDb =
                 new ApplicationContext(connectionConfig, newDbName))
             {
-                using(ApplicationContext db =
+                using (ApplicationContext db =
                     new ApplicationContext(connectionConfig, name))
                 {
                     newDb.Purchases = db.Purchases;
@@ -53,7 +53,7 @@ namespace BusinessSales
         }
         public void deleteDatabase()
         {
-            using(ApplicationContext db = 
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
                 db.deleteDatabase();
@@ -71,7 +71,7 @@ namespace BusinessSales
         }
         public void pushSale(Sale sale)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
                 db.Sales.Add(sale);
@@ -81,7 +81,7 @@ namespace BusinessSales
 
         public bool hasProducts(string nameOfProducts)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
                 return db.Store.ToList().Any(x => x.NameOfProducts == nameOfProducts);
@@ -92,13 +92,13 @@ namespace BusinessSales
 
         public bool hasAnoughCount(string nameOfProducts, int countOfProducts)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
-                foreach(ProductsBatch productsBatch in db.Store.ToList())
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
                 {
                     if (productsBatch.NameOfProducts == nameOfProducts &&
-                        productsBatch.CountOfProducts >= countOfProducts) 
+                        productsBatch.CountOfProducts >= countOfProducts)
                         return true;
                 }
 
@@ -108,15 +108,15 @@ namespace BusinessSales
 
         public double getCostOfSale(string nameOfProducts, int countOfProducts)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
                 foreach (ProductsBatch productsBatch in db.Store.ToList())
                 {
-                    if(productsBatch.NameOfProducts == nameOfProducts)
+                    if (productsBatch.NameOfProducts == nameOfProducts)
                     {
-                        return Math.Round((double)countOfProducts / 
-                            (double)productsBatch.CountOfProducts * 
+                        return Math.Round((double)countOfProducts /
+                            (double)productsBatch.CountOfProducts *
                             (double)productsBatch.PurchasePrice, 2);
                     }
                 }
@@ -127,12 +127,12 @@ namespace BusinessSales
 
         public void appendProductsToBatch(ProductsBatch productsBatch)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
-                foreach(ProductsBatch batch in db.Store.ToList())
+                foreach (ProductsBatch batch in db.Store.ToList())
                 {
-                    if(batch.NameOfProducts == productsBatch.NameOfProducts)
+                    if (batch.NameOfProducts == productsBatch.NameOfProducts)
                     {
                         batch.CountOfProducts += productsBatch.CountOfProducts;
                         batch.PurchasePrice += productsBatch.PurchasePrice;
@@ -148,21 +148,21 @@ namespace BusinessSales
                 db.SaveChanges();
             }
         }
-        public void popProductsFromBatch(string nameOfProducts, 
+        public void popProductsFromBatch(string nameOfProducts,
             int countOfProducts, double priceOfSale)
         {
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
-                foreach(ProductsBatch productsBatch in db.Store.ToList())
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
                 {
-                    if(productsBatch.NameOfProducts == nameOfProducts)
+                    if (productsBatch.NameOfProducts == nameOfProducts)
                     {
-                        if(productsBatch.CountOfProducts > countOfProducts)
+                        if (productsBatch.CountOfProducts > countOfProducts)
                         {
                             productsBatch.CountOfProducts -= countOfProducts;
-                            
-                            if(productsBatch.PurchasePrice <= priceOfSale)
+
+                            if (productsBatch.PurchasePrice <= priceOfSale)
                                 productsBatch.PurchasePrice = 0;
                             else
                                 productsBatch.PurchasePrice -= priceOfSale;
@@ -172,7 +172,7 @@ namespace BusinessSales
 
                             return;
                         }
-                        else if(productsBatch.CountOfProducts == countOfProducts)
+                        else if (productsBatch.CountOfProducts == countOfProducts)
                         {
                             db.Store.Remove(productsBatch);
                             db.SaveChanges();
@@ -186,21 +186,21 @@ namespace BusinessSales
 
         public List<PurchaseResponseJson> getPurchases()
         {
-            List<PurchaseResponseJson> purchasesHistory = 
+            List<PurchaseResponseJson> purchasesHistory =
                 new List<PurchaseResponseJson>();
 
-            using(ApplicationContext db =
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
-                foreach(Purchase purchase in db.Purchases.ToList())
+                foreach (Purchase purchase in db.Purchases.ToList())
                 {
                     PurchaseResponseJson purchaseResponseJson =
                         new PurchaseResponseJson(
                             Convert.ToString(purchase.Id),
-                            Convert.ToString(purchase.Date), 
+                            Convert.ToString(purchase.Date),
                             purchase.NameOfProducts,
                             Convert.ToString(purchase.PriceOfProduct),
-                            Convert.ToString(purchase.CountOfProducts), 
+                            Convert.ToString(purchase.CountOfProducts),
                             purchase.Comment,
                             Convert.ToString(purchase.PriceOfPurchase));
 
@@ -231,11 +231,70 @@ namespace BusinessSales
             }
         }
 
+        public List<string> getPurchasesInfo()
+        {
+            List<string> info = new List<string>();
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Purchase purchase in db.Purchases.ToList())
+                {
+                    info.Add(Convert.ToString(purchase.Date) + ", " +
+                        Convert.ToString(purchase.NameOfProducts));
+                }
+            }
+
+            return info;
+        }
+
+        public List<double> getPurchasesPrices()
+        {
+            List<double> prices = new List<double>();
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Purchase purchase in db.Purchases.ToList())
+                {
+                    prices.Add(purchase.PriceOfPurchase);
+                }
+            }
+
+            return prices;
+        }
+
+        public List<string> getPurchasesColors()
+        {
+            List<string> colors = new List<string>();
+
+            string[] colorsList = new string[] {
+                "rgba(151, 185, 129, 1)",
+                "rgba(90, 149, 117, 1)",
+                "rgba(42, 112, 104, 1)",
+                "rgba(6, 74, 85, 1)",
+                "rgba(0, 39, 57, 1)",
+            };
+
+            int numColors;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+                numColors = db.Purchases.ToList().Count();
+
+            Random rand = new Random();
+
+            for (int i = 0; i < numColors; i++)
+                colors.Add(colorsList[rand.Next(0, 5)]);
+
+            return colors;
+        }
+
         public List<SaleResponseJson> getSales()
         {
             List<SaleResponseJson> salesHistory = new List<SaleResponseJson>();
 
-            using(ApplicationContext db = 
+            using (ApplicationContext db =
                 new ApplicationContext(connectionConfig, name))
             {
                 foreach (Sale sale in db.Sales.ToList())
@@ -260,9 +319,9 @@ namespace BusinessSales
             using (ApplicationContext db = new
                 ApplicationContext(connectionConfig, name))
             {
-                foreach (Sale sale in  db.Sales.ToList())
+                foreach (Sale sale in db.Sales.ToList())
                 {
-                    if(sale.Id == id)
+                    if (sale.Id == id)
                     {
                         db.Sales.Remove(sale);
                         db.SaveChanges();
@@ -273,6 +332,123 @@ namespace BusinessSales
 
                 return false;
             }
+        }
+
+        public List<string> getSalesInfo()
+        {
+            List<string> info = new List<string>();
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in db.Sales.ToList())
+                {
+                    info.Add(Convert.ToString(sale.Date) + ", " +
+                        Convert.ToString(sale.NameOfProducts));
+                }
+            }
+
+            return info;
+        }
+
+        public List<double> getSalesPrices()
+        {
+            List<double> prices = new List<double>();
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in db.Sales.ToList())
+                {
+                    prices.Add(sale.PriceOfSale);
+                }
+            }
+
+            return prices;
+        }
+
+        public List<string> getSalesColors()
+        {
+            List<string> colors = new List<string>();
+
+            string[] colorsList = new string[] {
+                "rgba(151, 185, 129, 1)",
+                "rgba(90, 149, 117, 1)",
+                "rgba(42, 112, 104, 1)",
+                "rgba(6, 74, 85, 1)",
+                "rgba(0, 39, 57, 1)",
+            };
+
+            int numColors;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+                numColors = db.Sales.ToList().Count();
+
+            Random rand = new Random();
+
+            for (int i = 0; i < numColors; i++)
+                colors.Add(colorsList[rand.Next(0, 5)]);
+
+            return colors;
+        }
+
+        public List<string> getNetIncomeInfo()
+        {
+            List<string> netIncomeInfo = new List<string>();
+
+            using(ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in db.Sales.ToList())
+                {
+                    netIncomeInfo.Add(sale.NameOfProducts);
+                }
+            }
+
+            return netIncomeInfo;
+        }
+
+        public List<double> getNetIncomePrices()
+        {
+            List<double> netIncomePrices = new List<double>();
+
+            using(ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in db.Sales.ToList())
+                {
+                    netIncomePrices.Add(sale.PriceOfSale - sale.CostOfSale);
+                }
+            }
+
+            return netIncomePrices;
+        }
+
+        public List<string> getNetIncomeColors()
+        {
+            List<string> colors = new List<string>();
+
+            string[] colorsList = new string[] {
+                "rgba(151, 185, 129, 1)",
+                "rgba(90, 149, 117, 1)",
+                "rgba(42, 112, 104, 1)",
+                "rgba(6, 74, 85, 1)",
+                "rgba(0, 39, 57, 1)",
+            };
+
+            int numColors;
+
+            using (ApplicationContext db =
+                new ApplicationContext(connectionConfig, name))
+                numColors = db.Sales.ToList().Count();
+
+            Random rand = new Random();
+
+            for (int i = 0; i < numColors; i++)
+                colors.Add(colorsList[rand.Next(0, 5)]);
+
+            return colors;
         }
 
         public List<ProductsBatchJson> getStore()
@@ -353,8 +529,12 @@ namespace BusinessSales
             {
                 foreach (Sale sale in db.Sales.ToList())
                 {
-                    sumPercent += (sale.PriceOfSale - sale.CostOfSale) / 
-                        sale.CostOfSale;
+                    if (sale.CostOfSale != 0)
+                    {
+                        sumPercent += (sale.PriceOfSale - sale.CostOfSale) /
+                            sale.CostOfSale;
+                    }
+
                     countOfSales++;
                 }
             }

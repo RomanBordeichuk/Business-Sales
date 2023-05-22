@@ -36,27 +36,29 @@ header a{
 
 /***************** MAIN *****************/
 
-.head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-h1{
-    font-size: 40px;
+.head h1{
+    font-size: 60px;
     padding: 40px;
     font-weight: bold;
     color: #333;
-    text-align: center;
+    text-align: right;
 }
-.head a{
+.head_links_block{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    margin: 10px;
+}
+.head_links_block > div{
+    display: flex;
     align-items: center;
-    margin: 20px;
-    padding: 20px 60px;
+    margin: 10px;
+    padding: 10px 20px;
+    border: 2px solid #97B981;
     border-radius: 10px;
-    font-size: 20px;
     background: #202027;
+}
+.head .links_block a:hover{
+    text-decoration: underline;
 }
 .head img{
     width: 25px;
@@ -133,6 +135,7 @@ a:hover{
 }
 .input_block h4:hover{
     background: #97B981;
+    color: white;
 }
 .input_block h4:active{
     filter: brightness(1.4);

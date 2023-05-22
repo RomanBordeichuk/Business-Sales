@@ -59,6 +59,9 @@ h1 {
     color: #97B981;
     text-decoration: none;
 }
+.link_block a:hover{
+    filter: brightness(1.4);
+}
 .table_wrap{
     width: 100%;
     padding: 10px;
@@ -72,7 +75,7 @@ h1 {
 }
 .row{
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 4fr 2fr;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 4fr 1fr;
     grid-template-rows: 1fr;
     padding: 10px 0;
     border-bottom: 1px solid #d9d9d9;

@@ -7,6 +7,11 @@
         string priceOfProduct, string countOfProducts, 
         string comment, string priceOfSale, string costOfSale);
 
+    record IncomeGraphJson(List<string> info, 
+        List<double> values, List<string> colors);
+    record NetIncomeGraphJson(List<string> info, 
+        List<double> values, List<string> colors);
+
     public class Sale
     {
         private int id;

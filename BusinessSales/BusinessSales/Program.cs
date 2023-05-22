@@ -130,6 +130,13 @@ app.Map("/pushPurchase", defaultMiddleware =>
 
         bool purchaseJsonCorrect = true;
 
+        if(nameOfProducts == "")
+        {
+            Console.WriteLine("Incorrect input name of products");
+            responseMessage += "Incorrect input name of products\n";
+
+            purchaseJsonCorrect = false;
+        }
         if (!DateOnly.TryParse(purchaseJson.date, out date))
         {
             Console.WriteLine("Incorrect input date");
@@ -190,6 +197,13 @@ app.Map("/pushSale", defaultMiddleware =>
 
         bool saleJsonCorrect = true;
 
+        if(nameOfProducts == "")
+        {
+            Console.WriteLine("Incorrect input name of products");
+            responseMessage += "Incorrect input name of products\n";
+
+            saleJsonCorrect = false;
+        }
         if (!DateOnly.TryParse(saleJson.date, out date))
         {
             Console.WriteLine("Incorrect input date");
@@ -367,7 +381,100 @@ app.Map("/deleteStoreField", defaultMiddleware =>
     });
 });
 
+// ********************* GRAPHS REQUESTS ***********************
+
+app.Map("/loadCostGraph", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<string> info = accountDatabase.getPurchasesInfo();
+        List<double> values = accountDatabase.getPurchasesPrices();
+        List<string> colors = accountDatabase.getPurchasesColors();
+
+        CostGraphJson costGraph = new CostGraphJson(info, values, colors);
+
+        await response.WriteAsJsonAsync<CostGraphJson>(costGraph);
+
+        Console.WriteLine("Cost graph configuration successfully setted");
+    });
+});
+
+app.Map("/loadIncomeGraph", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<string> info = accountDatabase.getSalesInfo();
+        List<double> values = accountDatabase.getSalesPrices();
+        List<string> colors = accountDatabase.getSalesColors(); 
+
+        IncomeGraphJson incomeGraph = new IncomeGraphJson(info, values, colors);
+
+        await response.WriteAsJsonAsync<IncomeGraphJson>(incomeGraph);
+
+        Console.WriteLine("Income graph configuration successfully setted");
+    });
+});
+
+app.Map("/loadNetIncomeGraph", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var response = context.Response;
+
+        List<string> info = accountDatabase.getNetIncomeInfo();
+        List<double> values = accountDatabase.getNetIncomePrices();
+        List<string> colors = accountDatabase.getNetIncomeColors();
+
+        NetIncomeGraphJson netIncomeGraph = new NetIncomeGraphJson(info, values, colors);
+
+        await response.WriteAsJsonAsync<NetIncomeGraphJson>(netIncomeGraph);
+
+        Console.WriteLine("Net income graph configuration successfully setted");
+    });
+});
+
 // ********************* SETTINGS REQUESTS ***********************
+
+app.Map("/changeName", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        AccountNameJson nameJson =
+            await request.ReadFromJsonAsync<AccountNameJson>();
+
+        if(nameJson.name != "")
+        {
+            if (webAppDatabase.changeAccountName(
+                accountDatabase.Name, nameJson.name))
+            {
+                accountDatabase.rewriteDatabase(nameJson.name);
+
+                Console.WriteLine("Account name successfully changed");
+
+                await response.WriteAsJsonAsync<string>("success");
+            }
+            else
+            {
+                Console.WriteLine("Account already exists");
+
+                await response.WriteAsJsonAsync<string>("Account already exists");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Name field cannot be empty");
+
+            await response.WriteAsJsonAsync<string>("Name field cannot be empty");
+        }
+    });
+});
 
 app.Map("/changePassword", defaultMiddleware =>
 {
@@ -378,46 +485,27 @@ app.Map("/changePassword", defaultMiddleware =>
 
         PasswordJson passwordJson = await request.ReadFromJsonAsync<PasswordJson>();
 
-        if (webAppDatabase.changePassword(
-            accountDatabase.Name, passwordJson.password))
+        if(passwordJson.password != "")
         {
-            Console.WriteLine("Account password successfully changed");
+            if (webAppDatabase.changePassword(
+                accountDatabase.Name, passwordJson.password))
+            {
+                Console.WriteLine("Account password successfully changed");
 
-            await response.WriteAsJsonAsync<string>("success");
+                await response.WriteAsJsonAsync<string>("success");
+            }
+            else
+            {
+                Console.WriteLine("Account doen't exists");
+
+                await response.WriteAsJsonAsync<string>("Account doen't exists");
+            }
         }
         else
         {
-            Console.WriteLine("Account doen't exists");
+            Console.WriteLine("Password field cannot be empty");
 
-            await response.WriteAsJsonAsync<string>("Account doen't exists");
-        }
-    });
-});
-
-app.Map("/changeName", defaultMiddleware =>
-{
-    defaultMiddleware.Run(async (context) =>
-    {
-        var request = context.Request;
-        var response = context.Response;
-
-        AccountNameJson nameJson = 
-            await request.ReadFromJsonAsync<AccountNameJson>();
-
-        if (webAppDatabase.changeAccountName(
-            accountDatabase.Name, nameJson.name))
-        {
-            accountDatabase.rewriteDatabase(nameJson.name);
-
-            Console.WriteLine("Account name successfully changed");
-
-            await response.WriteAsJsonAsync<string>("success");
-        }
-        else
-        {
-            Console.WriteLine("Account already exists");
-
-            await response.WriteAsJsonAsync<string>("Account already exists");
+            await response.WriteAsJsonAsync<string>("Password field cannot be empty");
         }
     });
 });

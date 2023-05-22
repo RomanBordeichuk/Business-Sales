@@ -1,62 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/settings.css"/>
-    <title>Settings</title>
-</head>
-<body>
-    <div class="allsettings">
-        <div class="settings-container">
-            <h1>Settings</h1>
-            <div class="button-group">
-                <button>Account settings</button>
-                <button>Login and security</button>
-                <button>Notification</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/settings.css" />
+        <title>Settings</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav><a href="">About us</a></nav>
+                <nav><a href="">Contact</a></nav>
+                <nav><a href="">Telegram</a></nav>
+                <nav><a href="">Instagram</a></nav>
             </div>
-        </div>
-        
-        <div class="container">
-            <div class="block">
-              <h1>Change account name: </h1>
-              <div class="input-row">
-                <h2>New account name:</h2>
-                <input type="text" placeholder="">
-              </div>
-              <button>Save</button>
-            </div>
-
-            <div class="block">
-                <h1>Change account name: </h1>
-                <div class="input-row">
-                  <h2>New account password</h2>
-                  <input type="text" placeholder="">
+        </header>
+        <main>
+            <div class="container">
+                <h1>Settings</h1>
+                <div class="link_block">
+                    <a href="main.html">return to main</a>
                 </div>
-                <button>Save</button>
-            </div>
-
-            <div class="block">
-                <div class="input-row">
-                    <h1>Delete account </h1>
+                <div class="settings_block">
+                    <h2>Change account name:</h2>
+                    <div class="input_block">
+                        <h4>New account name:</h4>
+                        <input type="text" id="nameInputChange" />
+                        <span id="settingsPageNameResponseMessageSpan"></span>
+                        <button onclick="changeAccountName()">Save</button>
+                    </div>
                 </div>
-                <button>Save</button>
+                <div class="settings_block">
+                    <h2>Change account name:</h2>
+                    <div class="input_block">
+                        <h4>New account password</h4>
+                        <input type="text" id="passInputChange" />
+                        <span id="settingsPagePassResponseMessageSpan"></span>
+                        <button onclick="changeAccountPassword()">Save</button>
+                    </div>
+                </div>
+                <div class="settings_block">
+                    <div class="input_block">
+                        <h2>Delete account</h2>
+                        <button onclick="deleteAccount()">Delete</button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <footer>
-        <nav>
-          <div class="social">
-            <a href="" class="about-us"> About us </a>
-            <a href=""> Contact </a>
-          </div>
-  
-          <div class="media">
-            <a href="" class="telegram"> Telegram </a>
-            <a href=""> Instagram </a>
-          </div>
-        </nav>
-      </footer>
-</body>
+        </main>
+    </body>
+
+    <script src="js/script.js"></script>
+    <script src="js/responses.js"></script>
 </html>

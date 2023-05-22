@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(../img/backready.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    min-width: 600px;
+}
+
+/***************** HEADER *****************/
+
+header{
+    background-color: #202027;
+}
+header .container{
+    display: flex;
+}
+header nav {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+header a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/***************** MAIN *****************/
+
+.head{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+.head h1{
+    display: inline-block;
+    padding: 10px 30px; 
+    border: 5px solid #83a56e;
+    border-radius: 0px 20px;
+    background-color: #b2d797;
+    font-weight: lighter;
+    font-size: 35px;
+}
+.link_block{
+    display: flex;
+    justify-content: flex-end;
+}
+.link_block a{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 3px solid #97B981;
+    border-radius: 10px;
+    background: #202027;
+    color: #97B981;
+    text-decoration: none;
+}
+.link_block a:hover{
+    filter: brightness(1.4);
+}
+.graph{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+    padding: 50px;
+    padding-bottom: 0;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.barchart{
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.barchart:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+}
+.leg {
+    width: 100%;
+    height: 200px;
+    display: flex;
+}
+.container .legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.container .legend li {
+    display: flex;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+.container .legend li div {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container .legend li p {
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+}
+.legend-line-through {
+    text-decoration: line-through;
+}

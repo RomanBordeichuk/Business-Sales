@@ -1,55 +1,48 @@
+const ul = document.querySelector(".details ul");
 let customChart = document.getElementById("custom-chart").getContext("2d");
+let programmingChart;
 
-let programmingChart = new Chart(customChart, {
-  type: "bar",
-  data: {
-    labels: ["Extra Small", "Small", "Medium", "Large", "Extra Large"],
-    datasets: [
-      {
-        label: "# of Votes (in Thousands)",
-        data: [8, 11, 17, 28, 36],
-        backgroundColor: [
-          "rgba(151, 185, 129, 1)",
-          "rgba(90, 149, 117, 1)",
-          "rgba(42, 112, 104, 1)",
-          "rgba(6, 74, 85, 1)",
-          "rgba(0, 39, 57, 1)",
-        ],
-        borderColor: [
-          "rgba(151, 185, 129, 0.5)",
-          "rgba(90, 149, 117, 0.5)",
-          "rgba(42, 112, 104, 0.5)",
-          "rgba(6, 74, 85, 0.5)",
-          "rgba(0, 39, 57, 0.5)",
-        ],
-        borderWidth: 2,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      yAxes: [
+function setIncomeChart(graphData){
+  programmingChart = new Chart(customChart, {
+    type: "bar",
+    data: {
+      labels: graphData.info,
+      datasets: [
         {
-          ticks: {
-            beginAtZero: true,
-          },
+          label: "# of $",
+          data: graphData.values,
+          backgroundColor: graphData.colors,
+          borderColor: graphData.colors,
+          borderWidth: 2,
         },
       ],
     },
-    plugins: {
-      legend: {
-        display: false,
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+      plugins: {
+        legend: {
+          display: false,
+        },
       },
     },
-  },
-});
+  });
 
-const ul = document.querySelector(".details ul");
+  generateLegend();
+}
 
 const populateUl = () => {
   programmingChart.data.labels.forEach((l, i) => {
     let li = document.createElement("li");
-    li.innerHTML = `${l}: <span class='percentage'>${programmingChart.data.datasets[0].data[i]}</span>`;
+    li.innerHTML = `${l}: <span class='percentage'>${
+      programmingChart.data.datasets[0].data[i]}</span>`;
     ul.appendChild(li);
   });
 };
@@ -88,5 +81,3 @@ const generateLegend = () => {
 
   legendContainer.appendChild(legendUL);
 };
-
-generateLegend();

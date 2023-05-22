@@ -18,23 +18,28 @@
     </header>
     <div class="container">
         <div class="head">
-            <a href="settings.html">
-                <img src="img/settings.png" alt="">
-                Settings
-            </a>
             <h1 id="mainPageH1">The company name</h1>
+            <div class="head_links_block">
+                <div>
+                    <img src="img/settings.png" alt="">
+                    <a href="settings.html">Settings</a>
+                </div>
+                <div>
+                    <a href="index.html">back to singIn</a>
+                </div>
+            </div>
         </div>
         <div class="graphs_list">
             <button>
-                <a href="diagrama.html">Investment graph →</a>
+                <a href="costGraph.html">cost graph →</a>
                 <img src="img/d1.JPEG" alt="">
             </button>
             <button>
-                <a href="income.html">Profit graph →</a>
+                <a href="incomeGraph.html">income graph →</a>
                 <img src="img/d2.JPEG" alt="">
             </button>
             <button>
-                <a href="profit.html">Net income graph →</a>
+                <a href="netIncome.html">Net income graph →</a>
                 <img src="img/d3.JPEG" alt="">
             </button>
         </div>
@@ -44,7 +49,7 @@
                 <div class="inputs_block">
                     <div class="input_block input_purchases">
                         <h4 onclick="showPurchasesInputs()">
-                            Menu for entering information about the purchase of goods
+                            Create new purchase
                         </h4>
                         <div class="hidden_block" id="purchases_hidden_block">
                             <div>
@@ -73,7 +78,7 @@
                     </div>
                     <div class="input_block input_sales">
                         <h4 onclick="showSalesInputs()">
-                            Menu for reporting on product sales
+                            Create new sale
                         </h4>
                         <div class="hidden_block" id="sales_hidden_block">
                             <div>

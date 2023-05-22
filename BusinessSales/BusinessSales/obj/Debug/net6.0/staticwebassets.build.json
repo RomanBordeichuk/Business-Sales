@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uDcd6nMWUljD4CVAmx6qZnyMreKDSfgO7+rdaF2y1bc=",
+  "Hash": "h8j/Y4O7oLuZ2g6blI93SqsLPfrDaP0cTwrltU1UQW4=",
   "Source": "BusinessSales",
   "BasePath": "_content/BusinessSales",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\diagrama.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\costGraph.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
-      "RelativePath": "css/diagrama.css",
+      "RelativePath": "costGraph.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\diagrama.css"
+      "OriginalItemSpec": "wwwroot\\costGraph.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\income.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\costIncomeGraph.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
-      "RelativePath": "css/income.css",
+      "RelativePath": "css/costIncomeGraph.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\income.css"
+      "OriginalItemSpec": "wwwroot\\css\\costIncomeGraph.css"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\main.css",
@@ -185,23 +185,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\style.css"
-    },
-    {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\diagrama.html",
-      "SourceId": "BusinessSales",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
-      "BasePath": "_content/BusinessSales",
-      "RelativePath": "diagrama.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\diagrama.html"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\amin.jpg",
@@ -697,12 +680,12 @@
       "OriginalItemSpec": "wwwroot\\img\\webflow.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\income.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\incomeGraph.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
-      "RelativePath": "income.html",
+      "RelativePath": "incomeGraph.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -711,7 +694,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\income.html"
+      "OriginalItemSpec": "wwwroot\\incomeGraph.html"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\index.html",
@@ -731,12 +714,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\diagrama.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\costGraph.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
-      "RelativePath": "js/diagrama.js",
+      "RelativePath": "js/costGraph.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -745,15 +728,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\diagrama.js"
+      "OriginalItemSpec": "wwwroot\\js\\costGraph.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\income.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\incomeGraph.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
-      "RelativePath": "js/income.js",
+      "RelativePath": "js/incomeGraph.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -762,7 +745,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\income.js"
+      "OriginalItemSpec": "wwwroot\\js\\incomeGraph.js"
     },
     {
       "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\profit.js",
