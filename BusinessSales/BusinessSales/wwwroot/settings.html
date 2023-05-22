@@ -4,29 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/settings.css"/>
+    <title>Settings</title>
 </head>
 <body>
-    <h1>Settings</h1>
+    <div class="allsettings">
+        <div class="settings-container">
+            <h1>Settings</h1>
+            <div class="button-group">
+                <button>Account settings</button>
+                <button>Login and security</button>
+                <button>Notification</button>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="block">
+              <h1>Change account name: </h1>
+              <div class="input-row">
+                <h2>New account name:</h2>
+                <input type="text" placeholder="">
+              </div>
+              <button>Save</button>
+            </div>
 
-    <span id="settingsPageResponseMessageSpan"></span><br>
-    <div>
-        <h3>Change account name</h3>
-        <span>New account name: </span><input type="text" id="nameInputChange"><br>
-        <button onclick="changeAccountName()">Save</button>
-    </div>
-    <div>
-        <h3>Change account password</h3>
-        <span>New account password: </span><input type="text" id="passInputChange"><br>
-        <button onclick="changeAccountPassword()">Save</button>
-    </div>
-    <div>
-        <h3>Delete account</h3>
-        <button onclick="deleteAccount()">Delete</button>
-    </div>
+            <div class="block">
+                <h1>Change account name: </h1>
+                <div class="input-row">
+                  <h2>New account password</h2>
+                  <input type="text" placeholder="">
+                </div>
+                <button>Save</button>
+            </div>
 
-    <script src="js/script.js"></script>
-    <script src="js/responses.js"></script>
+            <div class="block">
+                <div class="input-row">
+                    <h1>Delete account </h1>
+                </div>
+                <button>Save</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <nav>
+          <div class="social">
+            <a href="" class="about-us"> About us </a>
+            <a href=""> Contact </a>
+          </div>
+  
+          <div class="media">
+            <a href="" class="telegram"> Telegram </a>
+            <a href=""> Instagram </a>
+          </div>
+        </nav>
+      </footer>
 </body>
 </html>
