@@ -1,10 +1,11 @@
 ﻿namespace BusinessSales
 {
+    record SaleId(int id);
     record SaleJson(string date, string nameOfProducts, 
         string priceOfProduct, string countOfProducts, string comment);
-    record SaleResponseJson(string date, string nameOfProducts, 
+    record SaleResponseJson(string id, string date, string nameOfProducts, 
         string priceOfProduct, string countOfProducts, 
-        string comments, string priceOfSale, string costOfSale);
+        string comment, string priceOfSale, string costOfSale);
 
     public class Sale
     {

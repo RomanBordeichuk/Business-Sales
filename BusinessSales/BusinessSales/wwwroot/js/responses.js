@@ -256,13 +256,24 @@ async function loadPurchasesHistory(){
     result.forEach(fieldJson => {
         let fieldDiv = document.createElement("div");
 
-        fieldDiv.innerText = 
-        `Date: ${fieldJson.date}, ` +
-        `Name of products: ${fieldJson.nameOfProducts}, ` +
-        `Price of each product: ${fieldJson.priceOfProduct}, ` +
-        `Count of products: ${fieldJson.countOfProducts}, ` +
-        `Comment to purchase: ${fieldJson.comment}, ` +
-        `Price of purchase: ${fieldJson.priceOfPurchase}\n\n`;
+        fieldDiv.innerHTML = 
+        `<div class="row">` + 
+            `<span class="number">${fieldJson.id}</span>` +
+            `<input readonly type="text" value="${fieldJson.date}">` +
+            `<input readonly type="text" value="${fieldJson.nameOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.countOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.priceOfProduct}$">` +
+            `<input readonly type="text" value="${fieldJson.priceOfPurchase}$">` +
+            `<input readonly type="text" value="${fieldJson.comment}">` +
+            `<div class="change">` +
+                `<button onclick="">` +
+                    `<img src="img/pencil.png" alt="">` +
+                `</button>` +
+                `<button onclick="deletePurchasesHistoryField(${Number(fieldJson.id)})">` +
+                    `<img src="img/trash.png" alt="">` +
+                `</button>` +
+            `</div>` +
+        `</div>`;
 
         purchasesHistoryList.append(fieldDiv);
     });
@@ -280,14 +291,25 @@ async function loadSalesHistory(){
     result.forEach(fieldJson => {
         let fieldDiv = document.createElement("div");
 
-        fieldDiv.innerText = 
-        `Date: ${fieldJson.date}, ` +
-        `Name of products: ${fieldJson.nameOfProducts}, ` +
-        `Price of each product: ${fieldJson.priceOfProduct}, ` +
-        `Count of products: ${fieldJson.countOfProducts}, ` +
-        `Comment to purchase: ${fieldJson.comment}, ` +
-        `Price of purchase: ${fieldJson.priceOfSale}` +
-        `Cost of purchase: ${fieldJson.costOfSale}\n\n`;
+        fieldDiv.innerHTML = 
+        `<div class="row">` + 
+            `<span class="number">${fieldJson.id}</span>` +
+            `<input readonly type="text" value="${fieldJson.date}">` +
+            `<input readonly type="text" value="${fieldJson.nameOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.countOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.priceOfProduct}$">` +
+            `<input readonly type="text" value="${fieldJson.priceOfSale}$">` +
+            `<input readonly type="text" value="${fieldJson.costOfSale}$">` +
+            `<input readonly type="text" value="${fieldJson.comment}">` +
+            `<div class="change">` +
+                `<button onclick="">` +
+                    `<img src="img/pencil.png" alt="">` +
+                `</button>` +
+                `<button onclick="deleteSalesHistoryField(${Number(fieldJson.id)})">` +
+                    `<img src="img/trash.png" alt="">` +
+                `</button>` +
+            `</div>` +
+        `</div>`;
 
         salesHistoryList.append(fieldDiv);
     });
@@ -305,10 +327,21 @@ async function loadStore(){
     result.forEach(fieldJson => {
         let fieldDiv = document.createElement("div");
 
-        fieldDiv.innerText = 
-        `Name of products: ${fieldJson.nameOfProducts}, ` +
-        `Count of products: ${fieldJson.countOfProducts}, ` +
-        `Price of products batch: ${fieldJson.purchasePrice}\n\n`;
+        fieldDiv.innerHTML = 
+        `<div class="row">` + 
+            `<span class="number">${fieldJson.id}</span>` +
+            `<input readonly type="text" value="${fieldJson.nameOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.countOfProducts}">` +
+            `<input readonly type="text" value="${fieldJson.purchasePrice}$">` +
+            `<div class="change">` +
+                `<button onclick="">` +
+                    `<img src="img/pencil.png" alt="">` +
+                `</button>` +
+                `<button onclick="deleteStoreField(${Number(fieldJson.id)})">` +
+                    `<img src="img/trash.png" alt="">` +
+                `</button>` +
+            `</div>` +
+        `</div>`;
 
         storeList.append(fieldDiv);
     });
@@ -366,4 +399,63 @@ async function deleteAccount(){
         settingsPageResponseMessageSpan.innerText = result;
         console.log(result);
     }
+}
+
+// ******************* CHANGING DB DATA *********************
+
+async function deleteSalesHistoryField(id){
+    const response = await fetch("/deleteSalesHistoryField", {
+        method: "deleteSalesHistoryField",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            id: id
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") {
+        salesHistoryList.innerHTML = "";
+
+        loadSalesHistory();
+    }
+    else console.log(result);
+}
+
+async function deletePurchasesHistoryField(id){
+    const response = await fetch("/deletePurchasesHistoryField", {
+        method: "deletePurchasesHistoryField",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            id: id
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") {
+        purchasesHistoryList.innerHTML = "";
+
+        loadPurchasesHistory();
+    }
+    else console.log(result);
+}
+
+async function deleteStoreField(id){
+    const response = await fetch("/deleteStoreField", {
+        method: "deleteStoreField",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            id: id
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") {
+        storeList.innerHTML = "";
+
+        loadStoreHistory();
+    }
+    else console.log(result);
 }

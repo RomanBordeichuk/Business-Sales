@@ -1,6 +1,7 @@
 ﻿namespace BusinessSales
 {
-    record ProductsBatchJson(string nameOfProducts, 
+    record ProductsBatchId(int id);
+    record ProductsBatchJson(string id, string nameOfProducts, 
         string countOfProducts, string purchasePrice);
 
     public class ProductsBatch

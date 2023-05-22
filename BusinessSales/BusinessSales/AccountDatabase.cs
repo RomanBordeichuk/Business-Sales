@@ -115,9 +115,9 @@ namespace BusinessSales
                 {
                     if(productsBatch.NameOfProducts == nameOfProducts)
                     {
-                        return (double)countOfProducts / 
+                        return Math.Round((double)countOfProducts / 
                             (double)productsBatch.CountOfProducts * 
-                            (double)productsBatch.PurchasePrice;
+                            (double)productsBatch.PurchasePrice, 2);
                     }
                 }
 
@@ -196,6 +196,7 @@ namespace BusinessSales
                 {
                     PurchaseResponseJson purchaseResponseJson =
                         new PurchaseResponseJson(
+                            Convert.ToString(purchase.Id),
                             Convert.ToString(purchase.Date), 
                             purchase.NameOfProducts,
                             Convert.ToString(purchase.PriceOfProduct),
@@ -209,6 +210,27 @@ namespace BusinessSales
 
             return purchasesHistory;
         }
+
+        public bool deletePurchasesHistoryField(int id)
+        {
+            using (ApplicationContext db = new
+                ApplicationContext(connectionConfig, name))
+            {
+                foreach (Purchase purchase in db.Purchases.ToList())
+                {
+                    if (purchase.Id == id)
+                    {
+                        db.Purchases.Remove(purchase);
+                        db.SaveChanges();
+
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
+
         public List<SaleResponseJson> getSales()
         {
             List<SaleResponseJson> salesHistory = new List<SaleResponseJson>();
@@ -219,6 +241,7 @@ namespace BusinessSales
                 foreach (Sale sale in db.Sales.ToList())
                 {
                     SaleResponseJson saleResponseJson = new SaleResponseJson(
+                        Convert.ToString(sale.Id),
                         Convert.ToString(sale.Date), sale.NameOfProducts,
                         Convert.ToString(sale.PriceOfProduct),
                         Convert.ToString(sale.CountOfProducts), sale.Comment,
@@ -231,6 +254,27 @@ namespace BusinessSales
 
             return salesHistory;
         }
+
+        public bool deleteSalesHistoryField(int id)
+        {
+            using (ApplicationContext db = new
+                ApplicationContext(connectionConfig, name))
+            {
+                foreach (Sale sale in  db.Sales.ToList())
+                {
+                    if(sale.Id == id)
+                    {
+                        db.Sales.Remove(sale);
+                        db.SaveChanges();
+
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
+
         public List<ProductsBatchJson> getStore()
         {
             List<ProductsBatchJson> store = new List<ProductsBatchJson>();
@@ -241,6 +285,7 @@ namespace BusinessSales
                 foreach (ProductsBatch productsBatch in db.Store.ToList())
                 {
                     ProductsBatchJson productsBatchJson = new ProductsBatchJson(
+                        Convert.ToString(productsBatch.Id),
                         productsBatch.NameOfProducts,
                         Convert.ToString(productsBatch.CountOfProducts),
                         Convert.ToString(productsBatch.PurchasePrice));
@@ -250,6 +295,26 @@ namespace BusinessSales
             }
 
             return store;
+        }
+
+        public bool deleteStoreField(int id)
+        {
+            using (ApplicationContext db = new
+                ApplicationContext(connectionConfig, name))
+            {
+                foreach (ProductsBatch productsBatch in db.Store.ToList())
+                {
+                    if (productsBatch.Id == id)
+                    {
+                        db.Store.Remove(productsBatch);
+                        db.SaveChanges();
+
+                        return true;
+                    }
+                }
+
+                return false;
+            }
         }
 
         public double getTotalIncome()

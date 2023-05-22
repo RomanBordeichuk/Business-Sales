@@ -1,8 +1,9 @@
 ﻿namespace BusinessSales
 {
+    record PurchaseId(int id);
     record PurchaseJson(string date, string nameOfProducts, 
         string priceOfProduct, string countOfProducts, string comment);
-    record PurchaseResponseJson(string date, string nameOfProducts, 
+    record PurchaseResponseJson(string id, string date, string nameOfProducts, 
         string priceOfProduct, string countOfProducts, 
         string comment, string priceOfPurchase);
 

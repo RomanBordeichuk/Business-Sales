@@ -1,0 +1,56 @@
+
+/*.chart-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 10px 48px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }*/
+  .container{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Roboto", sans-serif;
+  }
+  .container .barchart{
+    width: 600px;
+    padding: 10px 48px;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  .container .details{
+    width: 200px;
+    height: 200px;
+    padding: 10px 20px;
+    font-family: "Roboto", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+  }
+  .chart-container h2.chart-heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+  .barchart:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 16px -7px rgba(0, 0, 0, 0.3);
+  }
+  
+  .container .details ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .container .details ul li {
+    font-size: 16px;
+    margin: 12px 0;
+    text-transform: uppercase;
+  }
+  
+  .container .details .percentage {
+    font-weight: 700;
+    color: #e63946;
+  }

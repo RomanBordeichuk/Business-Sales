@@ -265,6 +265,31 @@ app.Map("/purchasesHistory", defaultMiddleware =>
     });
 });
 
+app.Map("/deletePurchasesHistoryField", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        PurchaseId purchaseId = await request.ReadFromJsonAsync<PurchaseId>();
+
+        if (accountDatabase.deletePurchasesHistoryField(purchaseId.id))
+        {
+            Console.WriteLine("Purchases history field successfully deleted");
+
+            await response.WriteAsJsonAsync<string>("success");
+        }
+        else
+        {
+            Console.WriteLine("Purchases history field hadn't found");
+
+            await response.WriteAsJsonAsync<string>(
+                "Purchases history field hadn't found");
+        }
+    });
+});
+
 app.Map("/salesHistory", defaultMiddleware =>
 {
     defaultMiddleware.Run(async (context) =>
@@ -279,6 +304,30 @@ app.Map("/salesHistory", defaultMiddleware =>
     });
 });
 
+app.Map("/deleteSalesHistoryField", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        SaleId saleId = await request.ReadFromJsonAsync<SaleId>();
+
+        if (accountDatabase.deleteSalesHistoryField(saleId.id))
+        {
+            Console.WriteLine("Sales history field successfully deleted");
+
+            await response.WriteAsJsonAsync<string>("success");
+        }
+        else
+        {
+            Console.WriteLine("Sales history field hadn't found");
+
+            await response.WriteAsJsonAsync<string>("Sales history field hadn't found");
+        }
+    });
+});
+
 app.Map("/store", defaultMiddleware =>
 {
     defaultMiddleware.Run(async (context) =>
@@ -290,6 +339,31 @@ app.Map("/store", defaultMiddleware =>
         Console.WriteLine("Store of unsold products successfully responded");
 
         await response.WriteAsJsonAsync<List<ProductsBatchJson>>(store);
+    });
+});
+
+app.Map("/deleteStoreField", defaultMiddleware =>
+{
+    defaultMiddleware.Run(async (context) =>
+    {
+        var request = context.Request;
+        var response = context.Response;
+
+        ProductsBatchId productsBatchId = 
+            await request.ReadFromJsonAsync<ProductsBatchId>();
+
+        if (accountDatabase.deleteStoreField(productsBatchId.id))
+        {
+            Console.WriteLine("Store field successfully deleted");
+
+            await response.WriteAsJsonAsync<string>("success");
+        }
+        else
+        {
+            Console.WriteLine("Store field hadn't found");
+
+            await response.WriteAsJsonAsync<string>("Store field hadn't found");
+        }
     });
 });
 
