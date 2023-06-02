@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cost graph</title>
+        <link rel="stylesheet" href="css/costIncomeGraph.css" />
+    </head>
+    <body>
+    <header>
+        <div class="container">
+            <nav><a href="">About us</a></nav>
+            <nav><a href="">Contact</a></nav>
+            <nav><a href="">Telegram</a></nav>
+            <nav><a href="">Instagram</a></nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="head">
+                <h1>Cost graph</h1>
+            </div>
+            <div class="link_block">
+                <a href="main.html">return to main</a>
+            </div>
+            <div class="graph">
+                <div class="barchart">
+                    <canvas id="custom-chart"></canvas>
+                </div>
+                <div class="details">
+                    <ul></ul>
+                </div>
+                <div class="leg" id="legend-container">
+                    <ul class="legend"></ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/costGraph.js"></script>
+    <script src="js/responses.js"></script>
+    <script>
+        loadCostGraph();
+    </script>
+  </body>
+</html>

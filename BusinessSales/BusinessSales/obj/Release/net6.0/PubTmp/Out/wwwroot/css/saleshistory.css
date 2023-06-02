@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-blend-mode: overlay;
+    background-image: url(../img/saleshistory.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+.container{
+    max-width: 1200px;
+    min-width: 600px;
+    margin: 0 auto;
+}
+
+/***************** HEADER *****************/
+
+header{
+    background-color: #202027;
+}
+header .container{
+    display: flex;
+}
+header nav {
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/***************** MAIN *****************/
+
+h1 {
+    font-size: 32px;
+    padding: 40px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+.link_block{
+    display: flex;
+    justify-content: flex-end;
+}
+.link_block a{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 3px solid #97B981;
+    border-radius: 10px;
+    background: #202027;
+    color: #97B981;
+    text-decoration: none;
+}
+.link_block a:hover{
+    filter: brightness(1.4);
+}
+.table_wrap{
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    background: #202027;
+}
+.table {
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+}
+.row{
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr 2fr 2fr 4fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid #d9d9d9;
+}
+.row:last-child{
+    border-bottom: none;
+}
+.row span{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-left: 2px solid #97B981;
+    border-right: 2px solid #97B981;
+    font-weight: bold;
+}
+.row span:first-child{
+    border-left: 0;
+}
+.row span:last-child{
+    border-right: 0;
+}
+.row .number{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+}
+.row input{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-left: 2px solid #97B981;
+    border-right: 2px solid #97B981;
+}
+.row input:first-child{
+    border-left: 0;
+}
+.row textarea{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-left: 2px solid #97B981;
+    border-right: 2px solid #97B981;
+}
+.row .change{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid #97B981;
+}
+.row .change button{
+    width: 20px;
+    margin: 0 10px;
+    border: 0;
+    background: transparent;
+    transition: 0.2s;
+}
+.row .change button:hover{
+    border-bottom: 2px solid #202027;
+}
+.row .change img{
+    width: 100%;
+    box-sizing: content-box;
+    cursor: pointer;
+}

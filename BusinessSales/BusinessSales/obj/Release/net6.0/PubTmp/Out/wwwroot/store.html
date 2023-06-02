@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/store.css" />
+        <title>Products store</title>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav><a href="">About us</a></nav>
+                <nav><a href="">Contact</a></nav>
+                <nav><a href="">Telegram</a></nav>
+                <nav><a href="">Instagram</a></nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <h1>Products store</h1>
+                <div class="link_block">
+                    <a href="main.html">return to main</a>
+                </div>
+                <div class="table_wrap">
+                    <div class="table">
+                        <div class="row">
+                            <span class="number">№</span>
+                            <span>Name of products</span>
+                            <span>The quantity of goods</span>
+                            <span>Price of products batch</span>
+                            <span>delete</span>
+                        </div>
+                        <div class="storeList" id="storeList">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script src="js/script.js"></script>
+        <script src="js/responses.js"></script>
+        <script>
+            loadStore();
+        </script>
+    </body>
+</html>

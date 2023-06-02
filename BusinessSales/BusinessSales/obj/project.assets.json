@@ -718,11 +718,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
+      "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
       "projectName": "BusinessSales",
-      "projectPath": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
+      "projectPath": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\obj\\",
+      "outputPath": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

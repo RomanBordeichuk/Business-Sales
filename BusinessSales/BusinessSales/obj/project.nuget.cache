@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qMnkXkfIoIrCBErTic10eMZCtDMy1t5BRlVlJVaxH5SlehCE4Nys1mJbFrS0jby8WK42QmDnS8EUX2oHqeNpNQ==",
+  "dgSpecHash": "iewG16njj3vKcc+Z8+fWYR1qyOkbG0DUsqdVCfkkq2TR/ePBsGA3TeVzLjgDAGOFcbj5mDrUuJWkOYXifcUJcg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
+  "projectFilePath": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\BusinessSales.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.2\\microsoft.entityframeworkcore.7.0.2.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.2\\microsoft.entityframeworkcore.abstractions.7.0.2.nupkg.sha512",

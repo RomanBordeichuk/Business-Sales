@@ -1,0 +1,6 @@
+{
+  "connectionConfig": {
+    "ConnectionString": "server=localhost;user=root;password=root;database=",
+    "MySqlServerVersion": [ 8, 0, 31 ]
+  }
+}

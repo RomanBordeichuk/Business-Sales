@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css"/>
+    <title>Main page</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav><a href="">About us</a></nav>
+            <nav><a href="">Contact</a></nav>
+            <nav><a href="">Telegram</a></nav>
+            <nav><a href="">Instagram</a></nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="head">
+            <h1 id="mainPageH1">The company name</h1>
+            <div class="head_links_block">
+                <div>
+                    <img src="img/settings.png" alt="">
+                    <a href="settings.html">Settings</a>
+                </div>
+                <div>
+                    <a href="index.html">back to singIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="graphs_list">
+            <button>
+                <a href="costGraph.html">cost graph →</a>
+                <img src="img/d1.JPEG" alt="">
+            </button>
+            <button>
+                <a href="incomeGraph.html">income graph →</a>
+                <img src="img/d2.JPEG" alt="">
+            </button>
+            <button>
+                <a href="netIncome.html">Net income graph →</a>
+                <img src="img/d3.JPEG" alt="">
+            </button>
+        </div>
+        <div class="main">
+            <div class="main_block">
+                <h3>Input new purchase / sale</h3>
+                <div class="inputs_block">
+                    <div class="input_block input_purchases">
+                        <h4 onclick="showPurchasesInputs()">
+                            Create new purchase
+                        </h4>
+                        <div class="hidden_block" id="purchases_hidden_block">
+                            <div>
+                                <span>Date of purchase</span>
+                                <input type="text" id="purchaseDateInput">
+                            </div>
+                            <div>
+                                <span>Name of products</span>
+                                <input type="text" id="purchaseNameInput">
+                            </div>
+                            <div>
+                                <span>Price of each product</span>
+                                <input type="text" id="purchasePriceInput">
+                            </div>
+                            <div>
+                                <span>Count of products</span>
+                                <input type="text" id="purchaseCountInput">
+                            </div>
+                            <div class="comment">
+                                <span>Comment to purchase</span>
+                                <textarea id="purchaseCommentInput" cols="30" rows="5"></textarea>
+                                <span class="response" id="mainPagePurchaseResponseSpan"></span>
+                            </div>
+                            <button onclick="pushPurchase()">submit</button>
+                        </div>
+                    </div>
+                    <div class="input_block input_sales">
+                        <h4 onclick="showSalesInputs()">
+                            Create new sale
+                        </h4>
+                        <div class="hidden_block" id="sales_hidden_block">
+                            <div>
+                                <span>Date of sale</span>
+                                <input type="text" id="saleDateInput">
+                            </div>
+                            <div>
+                                <span>Name of products</span>
+                                <input type="text" id="saleNameInput">
+                            </div>
+                            <div>
+                                <span>Price of each product</span>
+                                <input type="text" id="salePriceInput">
+                            </div>
+                            <div>
+                                <span>Count of products</span>
+                                <input type="text" id="saleCountInput">
+                            </div>
+                            <div class="comment">
+                                <span>Comment to sale</span>
+                                <textarea id="saleCommentInput" cols="30" rows="5"></textarea>
+                                <span class="response" id="mainPageSaleResponseSpan"></span>
+                            </div>
+                            <button onclick="pushSale()">submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info_labels_block">
+                <div class="info_block">
+                    <span>Total income:</span>
+                    <span class="info" id="mainPageTotalIncomeSpan">100500$</span>
+                </div>
+                <div class="info_block">
+                    <span>Total guantity of goods sold:</span>
+                    <span class="info" id="mainPageTotalCountSpan">255</span>
+                </div>
+                <div class="info_block">
+                    <span>Average percent of profit:</span>
+                    <span class="info" id="mainPageAvPercentSpan">40%</span>
+                </div>
+                <div class="info_block">
+                    <span>Count of products in store:</span>
+                    <span class="info" id="mainPageCountStoreSpan">140</span>
+                </div>
+                <div class="info_block">
+                    <span>Total cost of products in store:</span>
+                    <span class="info" id="mainPageCostStoreSpan">2450$</span>
+                </div>
+                <div class="links_block">
+                    <div class="history_links">
+                        <a href="purchasesHistory.html">Purchases history</a>
+                        <a href="salesHistory.html">Sales history</a>
+                    </div>
+                    <div class="store_link">
+                        <a href="store.html">Store</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="js/responses.js"></script>
+    <script>
+        loadMainPage();
+    </script>
+</body>
+</html>
