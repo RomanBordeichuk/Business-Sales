@@ -379,62 +379,6 @@ async function loadNetIncomeGraph(){
     setNetIncomeChart(result);
 }
 
-// ******************* SETTINGS PAGE *********************
-
-async function changeAccountName(){
-    const response = await fetch("/changeName", {
-        method: "changeName",
-        headers: { "Accept":"application/json", "Content-type":"application/json" },
-        body: JSON.stringify({
-            name: nameInputChange.value
-        })
-    });
-
-    const result = await response.json();
-
-    if(result == "success") location.href = "index.html";
-    else {
-        settingsPageNameResponseMessageSpan.innerHTML = result;
-        settingsPageNameResponseMessageSpan.style = "background: #cf6655;";
-        console.log(result);
-    }
-}
-
-async function changeAccountPassword(){
-    const response = await fetch("/changePassword", {
-        method: "changePassword",
-        headers: { "Accept":"application/json", "Content-type":"application/json" },
-        body: JSON.stringify({
-            password: passInputChange.value
-        })
-    });
-
-    const result = await response.json();
-
-    if(result == "success") location.href = "index.html";
-    else {
-        settingsPagePassResponseMessageSpan.innerText = result;
-        settingsPagePassResponseMessageSpan.style = "background: #cf6655;";
-        console.log(result);
-    }
-}
-
-async function deleteAccount(){
-    const response = await fetch("/deleteAccount", {
-        method: "deleteAccount",
-        headers: { "Accept":"application/json", "Content-type":"application/json" },
-        body: JSON.stringify()
-    });
-
-    const result = await response.json();
-
-    if(result == "success") location.href = "index.html";
-    else {
-        settingsPageResponseMessageSpan.innerText = result;
-        console.log(result);
-    }
-}
-
 // ******************* CHANGING DB DATA *********************
 
 async function deletePurchasesHistoryField(id){
@@ -489,7 +433,63 @@ async function deleteStoreField(id){
     if(result == "success") {
         storeList.innerHTML = "";
 
-        loadStoreHistory();
+        loadStore();
     }
     else console.log(result);
+}
+
+// ******************* SETTINGS PAGE *********************
+
+async function changeAccountName(){
+    const response = await fetch("/changeName", {
+        method: "changeName",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            name: nameInputChange.value
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") location.href = "index.html";
+    else {
+        settingsPageNameResponseMessageSpan.innerHTML = result;
+        settingsPageNameResponseMessageSpan.style = "background: #cf6655;";
+        console.log(result);
+    }
+}
+
+async function changeAccountPassword(){
+    const response = await fetch("/changePassword", {
+        method: "changePassword",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify({
+            password: passInputChange.value
+        })
+    });
+
+    const result = await response.json();
+
+    if(result == "success") location.href = "index.html";
+    else {
+        settingsPagePassResponseMessageSpan.innerText = result;
+        settingsPagePassResponseMessageSpan.style = "background: #cf6655;";
+        console.log(result);
+    }
+}
+
+async function deleteAccount(){
+    const response = await fetch("/deleteAccount", {
+        method: "deleteAccount",
+        headers: { "Accept":"application/json", "Content-type":"application/json" },
+        body: JSON.stringify()
+    });
+
+    const result = await response.json();
+
+    if(result == "success") location.href = "index.html";
+    else {
+        settingsPageResponseMessageSpan.innerText = result;
+        console.log(result);
+    }
 }

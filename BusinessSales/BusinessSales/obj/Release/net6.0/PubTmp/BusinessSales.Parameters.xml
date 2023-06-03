@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="BusinessSales20230523212919" tags="IisApp">
-    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ADMIN\\Desktop\\Практичні\\2\ семестр\\ООП\\програма\ керування\ бізнес-процесами\\project\\BusinessSales\\BusinessSales\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
+  <parameter name="IIS Web Application Name" description="" value="businessSales" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2\ семестр\\ООП\\програма\ керування\ бізнес-процесами\\project\\BusinessSales\\BusinessSales\\obj\\Release\\net6\.0\\PubTmp\\Out\\$" />
   </parameter>
 </parameters>

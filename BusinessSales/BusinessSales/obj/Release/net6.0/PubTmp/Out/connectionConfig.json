@@ -1,6 +1,6 @@
 {
   "connectionConfig": {
-    "ConnectionString": "server=localhost;user=root;password=root;database=",
+    "ConnectionString": "server=a300450.mysql.database.azure.com;user=azureAdmin;password=root!1234;database=business_sales_db;",
     "MySqlServerVersion": [ 8, 0, 31 ]
   }
 }

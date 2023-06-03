@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Cv4XJaTzGIA4pgXp7U9TZREJQRFnESXPb3J1B1Opgl8=",
+  "Hash": "fQJXukfx8Jj6eTQM6Rr0BkjK/hiDqF/xznU+GObxSYI=",
   "Source": "BusinessSales",
   "BasePath": "_content/BusinessSales",
   "Mode": "Default",
@@ -10,17 +10,51 @@
     {
       "Name": "BusinessSales\\wwwroot",
       "Source": "BusinessSales",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\costGraph.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\aboutUs.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "aboutUs.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\aboutUs.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\contacts.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "contacts.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\contacts.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\costGraph.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "costGraph.html",
       "AssetKind": "All",
@@ -34,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\costGraph.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\costIncomeGraph.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\costIncomeGraph.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/costIncomeGraph.css",
       "AssetKind": "All",
@@ -51,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\costIncomeGraph.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\main.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\main.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/main.css",
       "AssetKind": "All",
@@ -68,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\main.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\purchasesHistory.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\purchasesHistory.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/purchasesHistory.css",
       "AssetKind": "All",
@@ -85,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\purchasesHistory.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\registration.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\registration.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/registration.css",
       "AssetKind": "All",
@@ -102,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\registration.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\saleshistory.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\saleshistory.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/saleshistory.css",
       "AssetKind": "All",
@@ -119,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\saleshistory.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\settings.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\settings.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/settings.css",
       "AssetKind": "All",
@@ -136,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\settings.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\store.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\store.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/store.css",
       "AssetKind": "All",
@@ -153,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\store.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\style.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "css/style.css",
       "AssetKind": "All",
@@ -170,10 +204,27 @@
       "OriginalItemSpec": "wwwroot\\css\\style.css"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\amin.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\css\\teamInfo.css",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "css/teamInfo.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\teamInfo.css"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\amin.jpg",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/amin.jpg",
       "AssetKind": "All",
@@ -187,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\img\\amin.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/backdiag.jpg",
       "AssetKind": "All",
@@ -204,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\img\\backdiag.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag2.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag2.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/backdiag2.jpg",
       "AssetKind": "All",
@@ -221,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\img\\backdiag2.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag3.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag3.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/backdiag3.jpg",
       "AssetKind": "All",
@@ -238,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\img\\backdiag3.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag4.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backdiag4.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/backdiag4.jpg",
       "AssetKind": "All",
@@ -255,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\img\\backdiag4.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backready.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\backready.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/backready.JPG",
       "AssetKind": "All",
@@ -272,10 +323,27 @@
       "OriginalItemSpec": "wwwroot\\img\\backready.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\check-mark.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\BasishinMarta.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/BasishinMarta.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\BasishinMarta.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\check-mark.png",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/check-mark.png",
       "AssetKind": "All",
@@ -289,10 +357,27 @@
       "OriginalItemSpec": "wwwroot\\img\\check-mark.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d1.JPEG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\CherniiDmytro.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/CherniiDmytro.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\CherniiDmytro.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d1.JPEG",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/d1.JPEG",
       "AssetKind": "All",
@@ -306,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\img\\d1.JPEG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d2.JPEG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d2.JPEG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/d2.JPEG",
       "AssetKind": "All",
@@ -323,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\img\\d2.JPEG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d3.JPEG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\d3.JPEG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/d3.JPEG",
       "AssetKind": "All",
@@ -340,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\img\\d3.JPEG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\diagram1.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\diagram1.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/diagram1.jpg",
       "AssetKind": "All",
@@ -357,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\img\\diagram1.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\diagramback.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\diagramback.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/diagramback.jpg",
       "AssetKind": "All",
@@ -374,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\img\\diagramback.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/first.JPG",
       "AssetKind": "All",
@@ -391,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\img\\first.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first1.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first1.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/first1.JPG",
       "AssetKind": "All",
@@ -408,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\img\\first1.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first2.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first2.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/first2.jpg",
       "AssetKind": "All",
@@ -425,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\img\\first2.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first3.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\first3.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/first3.jpg",
       "AssetKind": "All",
@@ -442,10 +527,10 @@
       "OriginalItemSpec": "wwwroot\\img\\first3.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\font.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\font.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/font.JPG",
       "AssetKind": "All",
@@ -459,10 +544,10 @@
       "OriginalItemSpec": "wwwroot\\img\\font.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\front.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\front.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/front.JPG",
       "AssetKind": "All",
@@ -476,10 +561,27 @@
       "OriginalItemSpec": "wwwroot\\img\\front.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\huyna.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\HrynkoOlena.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/HrynkoOlena.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\HrynkoOlena.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\huyna.jpg",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/huyna.jpg",
       "AssetKind": "All",
@@ -493,10 +595,10 @@
       "OriginalItemSpec": "wwwroot\\img\\huyna.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.back.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.back.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/img.back.jpg",
       "AssetKind": "All",
@@ -510,10 +612,10 @@
       "OriginalItemSpec": "wwwroot\\img\\img.back.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.table.JPEG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.table.JPEG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/img.table.JPEG",
       "AssetKind": "All",
@@ -527,10 +629,10 @@
       "OriginalItemSpec": "wwwroot\\img\\img.table.JPEG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.table.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\img.table.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/img.table.jpg",
       "AssetKind": "All",
@@ -544,10 +646,10 @@
       "OriginalItemSpec": "wwwroot\\img\\img.table.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\indexPageLoading.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\indexPageLoading.png",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/indexPageLoading.png",
       "AssetKind": "All",
@@ -561,10 +663,27 @@
       "OriginalItemSpec": "wwwroot\\img\\indexPageLoading.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\pencil.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\OlhaKalytyn.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/OlhaKalytyn.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\OlhaKalytyn.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\pencil.png",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/pencil.png",
       "AssetKind": "All",
@@ -578,10 +697,44 @@
       "OriginalItemSpec": "wwwroot\\img\\pencil.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\saleshistory.jpg",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\PeninaMarta.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/PeninaMarta.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\PeninaMarta.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\RomanBordeichuk.jpg",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/RomanBordeichuk.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\RomanBordeichuk.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\saleshistory.jpg",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/saleshistory.jpg",
       "AssetKind": "All",
@@ -595,10 +748,10 @@
       "OriginalItemSpec": "wwwroot\\img\\saleshistory.jpg"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\settings.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\settings.png",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/settings.png",
       "AssetKind": "All",
@@ -612,10 +765,10 @@
       "OriginalItemSpec": "wwwroot\\img\\settings.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\signUpPageLoading.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\signUpPageLoading.png",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/signUpPageLoading.png",
       "AssetKind": "All",
@@ -629,10 +782,27 @@
       "OriginalItemSpec": "wwwroot\\img\\signUpPageLoading.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\trash.png",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\team.jpg",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "img/team.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\team.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\trash.png",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/trash.png",
       "AssetKind": "All",
@@ -646,10 +816,10 @@
       "OriginalItemSpec": "wwwroot\\img\\trash.png"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\webflow.JPG",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\img\\webflow.JPG",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "img/webflow.JPG",
       "AssetKind": "All",
@@ -663,10 +833,10 @@
       "OriginalItemSpec": "wwwroot\\img\\webflow.JPG"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\incomeGraph.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\incomeGraph.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "incomeGraph.html",
       "AssetKind": "All",
@@ -680,10 +850,10 @@
       "OriginalItemSpec": "wwwroot\\incomeGraph.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\index.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\index.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -697,10 +867,27 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\costGraph.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\instagram.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "instagram.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\instagram.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\costGraph.js",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "js/costGraph.js",
       "AssetKind": "All",
@@ -714,10 +901,10 @@
       "OriginalItemSpec": "wwwroot\\js\\costGraph.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\incomeGraph.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\incomeGraph.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "js/incomeGraph.js",
       "AssetKind": "All",
@@ -731,10 +918,10 @@
       "OriginalItemSpec": "wwwroot\\js\\incomeGraph.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\netIncomeGraph.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\netIncomeGraph.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "js/netIncomeGraph.js",
       "AssetKind": "All",
@@ -748,10 +935,10 @@
       "OriginalItemSpec": "wwwroot\\js\\netIncomeGraph.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\responses.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\responses.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "js/responses.js",
       "AssetKind": "All",
@@ -765,10 +952,10 @@
       "OriginalItemSpec": "wwwroot\\js\\responses.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\script.js",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\js\\script.js",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "js/script.js",
       "AssetKind": "All",
@@ -782,10 +969,10 @@
       "OriginalItemSpec": "wwwroot\\js\\script.js"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\main.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\main.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "main.html",
       "AssetKind": "All",
@@ -799,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\main.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\netIncome.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\netIncome.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "netIncome.html",
       "AssetKind": "All",
@@ -816,10 +1003,10 @@
       "OriginalItemSpec": "wwwroot\\netIncome.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\purchasesHistory.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\purchasesHistory.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "purchasesHistory.html",
       "AssetKind": "All",
@@ -833,10 +1020,10 @@
       "OriginalItemSpec": "wwwroot\\purchasesHistory.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\registration.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\registration.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "registration.html",
       "AssetKind": "All",
@@ -850,10 +1037,10 @@
       "OriginalItemSpec": "wwwroot\\registration.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\salesHistory.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\salesHistory.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "salesHistory.html",
       "AssetKind": "All",
@@ -867,10 +1054,10 @@
       "OriginalItemSpec": "wwwroot\\salesHistory.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\settings.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\settings.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "settings.html",
       "AssetKind": "All",
@@ -884,10 +1071,10 @@
       "OriginalItemSpec": "wwwroot\\settings.html"
     },
     {
-      "Identity": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\store.html",
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\store.html",
       "SourceId": "BusinessSales",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
       "BasePath": "_content/BusinessSales",
       "RelativePath": "store.html",
       "AssetKind": "All",
@@ -899,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\store.html"
+    },
+    {
+      "Identity": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\telegram.html",
+      "SourceId": "BusinessSales",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ADMIN\\Desktop\\Універ\\Практичні\\2 семестр\\ООП\\програма керування бізнес-процесами\\project\\BusinessSales\\BusinessSales\\wwwroot\\",
+      "BasePath": "_content/BusinessSales",
+      "RelativePath": "telegram.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\telegram.html"
     }
   ]
 }
